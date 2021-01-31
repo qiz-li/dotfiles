@@ -55,7 +55,7 @@ function create() {
 
     fi
 
-    # Ask whether if it is Python
+    # Ask whether it is Python
     if read -rq "?Python 🐍? (y/n) "; then
         echo -e "\nSetting up Python environment\n"
 
