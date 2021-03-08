@@ -2,7 +2,7 @@
 
 function create() {
     # Navigate to projects directory
-    cd ~/documents/code || exit 1
+    cd "$HOME/documents/code/n-l1" || exit 1
     name=$1
 
     # Check whether to create a GitHub repo
@@ -25,7 +25,7 @@ function create() {
             https://api.github.com/user/repos
 
         # Clone from GitHub
-        git clone git@github.com:N-l1/"$name".git
+        git clone git@github.com:ilzq/"$name".git
         cd "$name" || exit 1
 
         echo -e "\nGitHub ✅"
@@ -57,19 +57,13 @@ function create() {
 
     # Ask whether it is Python
     if read -rq "?Python 🐍? (y/n) "; then
-        echo -e "\nSetting up Python environment\n"
+        echo -e "\nPreparing...🏗️ "
 
         # Create new Python file and setup venv
         touch "$name".py
         python3 -m venv .venv
-        source .venv/bin/activate
 
-        # Install linter and formatter
-        pip3 install flake8
-        pip3 install autopep8
-
-        deactivate
-        echo -e "\nPython ✅"
+        echo -e "Python ✅"
     else
         echo -e "\nPython ❌"
     fi
