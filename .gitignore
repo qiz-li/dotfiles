@@ -1,0 +1,4 @@
+# Ignore custom Zsh plugins & themes
+# We will install them in our install script
+zsh/plugins
+zsh/themes
