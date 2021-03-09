@@ -17,7 +17,7 @@ fi
 
 printf "\nInstalling Wget 🛒\n"
 if ! wget --version &>/dev/null; then
-    brew install neovim
+    brew install wget
     echo "Successfully installed Wget"
 else
     echo "Wget already installed"
@@ -70,4 +70,5 @@ else
     echo "Oh My Zsh already installed"
 fi
 
+source "$HOME/.zshrc"
 printf "\nSetup complete 🎉\n"
