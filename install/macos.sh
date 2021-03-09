@@ -15,13 +15,20 @@ else
     echo "Homebrew already installed"
 fi
 
+printf "\nInstalling Wget 🛒\n"
+if ! wget --version &>/dev/null; then
+    brew install neovim
+    echo "Successfully installed Wget"
+else
+    echo "Wget already installed"
+fi
+
 printf "\nInstalling ZSH 💤\n"
 if ! zsh --version &>/dev/null; then
     brew install zsh
     chsh -s /usr/local/bin/zsh
     echo "Successfully installed ZSH"
 else
-    chsh -s /bin/zsh
     echo "ZSH already installed"
 fi
 
