@@ -1,14 +1,14 @@
 #!/bin/sh
-#==============
+#=========================
 # Install script for macOS
 # WARNING! This will replace your old config files!
-#==============
+#==================================================
 
 # Change to dotfiles location
 dotfiles=$HOME/dotfiles
 
 echo "Installing Homebrew 🍺"
-if ! brew --version >/dev/null; then
+if ! brew --version &>/dev/null; then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     echo "Successfully installed Homebrew"
 else
@@ -16,7 +16,7 @@ else
 fi
 
 printf "\nInstalling ZSH 💤\n"
-if ! zsh --version >/dev/null; then
+if ! zsh --version &>/dev/null; then
     brew install zsh
     chsh -s /usr/local/bin/zsh
     echo "Successfully installed ZSH"
@@ -25,16 +25,8 @@ else
     echo "ZSH already installed"
 fi
 
-printf "\nInstalling Oh My Zsh 🤩\n"
-if ! [ -d "$ZSH" ]; then
-    sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-    echo "Successfully installed Oh My Zsh"
-else
-    echo "Oh My Zsh already installed"
-fi
-
 printf "\nInstalling Neovim 🍃\n"
-if ! nvim --version >/dev/null; then
+if ! nvim --version &>/dev/null; then
     brew install neovim
     echo "Successfully installed Neovim"
 else
@@ -62,4 +54,13 @@ wget -O "$dotfiles/zsh/themes/common.zsh-theme" https://raw.githubusercontent.co
 git clone https://github.com/zsh-users/zsh-autosuggestions "$dotfiles/zsh/plugins/zsh-autosuggestions"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$dotfiles/zsh/plugins/zsh-syntax-highlighting"
 echo "Successfully installed theme & plugins"
+
+printf "\nInstalling Oh My Zsh 🤩\n"
+if ! [ -d "$ZSH" ]; then
+    sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    echo "Successfully installed Oh My Zsh"
+else
+    echo "Oh My Zsh already installed"
+fi
+
 printf "\nSetup complete 🎉\n"
