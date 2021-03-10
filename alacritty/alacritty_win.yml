@@ -1,1 +1,41 @@
-/mnt/c/Users/nli/appdata/roaming/alacritty/alacritty.yml
+# Alacitty terminal Windows configuration
+# Slightly differs from alacritty.yml to avoid Mac specific options
+
+window:
+  dimensions:
+    columns: 100
+    lines: 25
+  padding:
+    x: 15
+    y: 15
+  # Spread additional padding evenly around the terminal content
+  dynamic_padding: true
+  # Static title "Terminal"
+  title: Terminal
+  decorations: full
+  dynamic_title: false
+
+background_opacity: 0.9
+
+scrolling:
+  # Maximum lines in the scrollback buffer
+  history: 1000
+
+font:
+  normal:
+    family: Cascadia Code
+    style: SemiLight
+  size: 12.0
+
+cursor:
+  style:
+    shape: Underline
+    blinking: On
+
+# WSL on Windows
+shell:
+  program: wsl ~
+
+key_bindings:
+  # Open another terminal window
+  - { key: N,    mods: Control,    action: SpawnNewInstance }
