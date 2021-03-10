@@ -7,6 +7,12 @@
 # Change to dotfiles location
 dotfiles=$HOME/dotfiles
 
+# Update packages if on Linux
+if [ "$(uname)" == "Linux" ]; then
+    echo "Updating packages, this might take a minute 📦"
+    sudo apt update
+fi
+
 # Only install Homebrew if on Mac
 if [ "$(uname)" == "Darwin" ]; then
     echo "Installing Homebrew 🍺"
@@ -18,12 +24,33 @@ if [ "$(uname)" == "Darwin" ]; then
     fi
 fi
 
+printf "\nInstalling Git 🏷️\n"
+if ! wget --version &>/dev/null; then
+    if [ "$(uname)" == "Darwin" ]; then
+        brew install git
+    else
+        sudo apt install git
+    fi
+    echo "Successfully installed Git"
+else
+    echo "Git already installed"
+fi
+
+# Configure Git credentials
+if ! git config user.name &>/dev/null; then
+    read -p 'Git username: ' git_usrname
+    git config --global user.name "$git_usrname"
+fi
+if ! git config user.email &>/dev/null; then
+    read -p 'Git email: ' git_email
+    git config --global user.email "$git_email"
+fi
+
 printf "\nInstalling Wget 🛒\n"
 if ! wget --version &>/dev/null; then
     if [ "$(uname)" == "Darwin" ]; then
         brew install wget
     else
-        sudo apt update
         sudo apt install wget
     fi
     echo "Successfully installed Wget"
@@ -58,18 +85,16 @@ fi
 
 printf "\nSymlinking·files·🗂\n"
 # Create .config if it does not exist
-if [ ! -d .config ]; then
-    mkdir .config
+if ! [ -d ~/.config ]; then
+    mkdir ~/.config
 fi
 rm ~/.zshrc
 ln -s ~/dotfiles/zsh/.zshrc ~/.zshrc
 rm -rf ~/.config/alacritty
 ln -s ~/dotfiles/alacritty ~/.config/alacritty
-
 echo "Symlink done"
 
 printf "\nInstalling Oh My Zsh theme & plugins 🎡\n"
-
 # Remove old theme & plugins, if any
 rm -rf "$dotfiles/zsh/themes"
 rm -rf "$dotfiles/zsh/plugins"
