@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #=================================
 # Install script for macOS & Linux
 # WARNING! This will replace your old config files!
