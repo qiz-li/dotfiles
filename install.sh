@@ -7,6 +7,13 @@
 # Change to dotfiles location
 dotfiles=$HOME/dotfiles
 
+# Ask for user permission
+read -p "This will overwrite existing files in your home directory. Are you sure? (y/n) " -n 1
+echo ""
+if [[ $REPLY =~ ^[Nn]$ ]]; then
+    exit 0
+fi
+
 # Update packages if on Linux
 if [ "$(uname)" == "Linux" ]; then
     echo "Updating packages, this might take a minute 📦"
