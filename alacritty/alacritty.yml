@@ -1,72 +1,37 @@
-# Alacitty configuration
+# Alacitty terminal macOS configuration
 # Not too much changes, quite like the default.
 
 window:
-  # Window dimensions
   dimensions:
     columns: 140
     lines: 38
-
-  # Windows paddings
   # Avoid conflict with transparent title bar
   padding:
     x: 10
     y: 40
-
-  # Spread additional padding evenly around the terminal content.
+  # Spread additional padding evenly around the terminal content
   dynamic_padding: true
-
-  # Window decorations
-  #   - full: Borders and title bar
-  #   - none: Neither borders nor title bar
-  #   (macOS only):
-  #   - transparent: Title bar, transparent background and title bar buttons
-  #   - buttonless: Title bar, transparent background and no title bar buttons
+  # Only leave the buttons
   decorations: transparent
 
-  # Window title
-  title: Terminal
+background_opacity: 0.9
 
 scrolling:
-  # Maximum number of lines in the scrollback buffer
-  # Specifying '0' will disable scrolling.
+  # Maximum lines in the scrollback buffer
   history: 1000
 
-# Font configuration
 font:
-  # Font family
-  #   - (macOS) Menlo
-  #   - (Linux/BSD) monospace
-  #   - (Windows) Consolas
   normal:
     family: Cascadia Code
-
-  # Font size
+    style: SemiLight
   size: 15.0
 
-# Background opacity
-background_opacity: 0.95
-
 cursor:
-  # Cursor style
   style:
-    # Cursor shape
-    #   - ▇ Block
-    #   - _ Underline
-    #   - | Beam
     shape: Underline
-
-    # Cursor blinking state
-    #   - Never: Prevent the cursor from ever blinking
-    #   - Off: Disable blinking by default
-    #   - On: Enable blinking by default
-    #   - Always: Force the cursor to always blink
     blinking: On
 
-# Shell
-#   - (macOS) /bin/bash --login
-#   - (Linux/BSD) user login shell
-#   - (Windows) powershell
+# Zsh on Mac
 shell:
   program: /bin/zsh
   args:
