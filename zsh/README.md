@@ -1,16 +1,14 @@
-# ℤ𝕤𝕙
+# ZSH 💤
 
-> My configuration with [Oh-my-zsh!](https://github.com/ohmyzsh/ohmyzsh/)
+([Oh My](https://github.com/ohmyzsh/ohmyzsh)) Zsh setup with great features such as:
 
-## Overview
+- Simple [prompt](https://github.com/jackharrisonsherlock/common) 🚀
+- Useful [suggestions](https://github.com/zsh-users/zsh-autosuggestions) 📖
+- Good-looking syntax [highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) 👍
 
-- Simple [prompt](https://github.com/jackharrisonsherlock/common)
-- Useful [suggestions](https://github.com/zsh-users/zsh-autosuggestions)
-- Good-looking syntax [highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+and awesome functions such as:
 
-## Functions
-
-### `create`
+**`create`**
 
 Used to create new projects:
 
