@@ -70,6 +70,12 @@ rm ~/.zshrc
 ln -s ~/dotfiles/zsh/.zshrc ~/.zshrc
 rm -rf ~/.config/alacritty
 ln -s ~/dotfiles/alacritty ~/.config/alacritty
+rm -rf ~/.config/nvim
+ln -s ~/dotfiles/nvim ~/.config/nvim
+# Install vim-plug if not already installed
+[[ ! -f ~/.config/nvim/autoload/plug.vim ]] &&
+    curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
+        "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
 echo "Symlink done"
 
 printf "\nInstalling Oh My Zsh theme & plugins 🎡\n"
