@@ -18,18 +18,18 @@ fi
 if [ "$(uname)" == "Linux" ]; then
     echo "Updating packages, this might take a minute 📦"
     sudo apt update
-fi
-
-# Only install Homebrew if on Mac
-if [ "$(uname)" == "Darwin" ]; then
+# Install Homebrew if on Mac
+elif [ "$(uname)" == "Darwin" ]; then
     echo "Installing Homebrew 🍺"
     if ! brew --version &>/dev/null; then
-        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-        echo "Successfully installed Homebrew"
+	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+	echo "Successfully installed Homebrew"
     else
         echo "Homebrew already installed"
-    fi
-fi
+    fi	
+else
+    echo "Sorry, only macOS & Linux are supported"
+    exit 1
 
 printf "\nInstalling Git 🏷️\n"
 if ! wget --version &>/dev/null; then
