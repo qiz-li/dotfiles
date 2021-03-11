@@ -7,6 +7,9 @@
 # Change to dotfiles location
 dotfiles=$HOME/dotfiles
 
+# Packages to install, using brew on macOS and apt on Linux
+packages=(wget git zsh nvim neofetch)
+
 # Ask for user permission
 read -rp "This will overwrite existing files in your home directory. Are you sure? (y/n) " -n 1
 echo ""
@@ -17,7 +20,7 @@ fi
 # Update packages if on Linux
 if [ "$(uname)" == "Linux" ]; then
     echo "Updating packages, this might take a minute 📦"
-    sudo apt update
+    # sudo apt update
 # Install Homebrew if on Mac
 elif [ "$(uname)" == "Darwin" ]; then
     echo "Installing Homebrew 🍺"
@@ -32,17 +35,21 @@ else
     exit 1
 fi
 
-printf "\nInstalling Git 🏷️\n"
-if ! wget --version &>/dev/null; then
-    if [ "$(uname)" == "Darwin" ]; then
-        brew install git
+# Install packages
+for package in "${packages[@]}"; do
+    printf "\nInstalling %s\n" "$package"
+    # Check if already installed
+    if ! "$package" --version &>/dev/null; then
+        if [ "$(uname)" == "Darwin" ]; then
+            brew install "$package"
+        else
+            sudo apt install "$package"
+        fi
+        echo "Successfully installed $package"
     else
-        sudo apt install git
+        echo "$package already installed"
     fi
-    echo "Successfully installed Git"
-else
-    echo "Git already installed"
-fi
+done
 
 # Configure Git credentials
 if ! git config user.name &>/dev/null; then
@@ -52,43 +59,6 @@ fi
 if ! git config user.email &>/dev/null; then
     read -rp 'Git email: ' git_email
     git config --global user.email "$git_email"
-fi
-
-printf "\nInstalling Wget 🛒\n"
-if ! wget --version &>/dev/null; then
-    if [ "$(uname)" == "Darwin" ]; then
-        brew install wget
-    else
-        sudo apt install wget
-    fi
-    echo "Successfully installed Wget"
-else
-    echo "Wget already installed"
-fi
-
-printf "\nInstalling ZSH 💤\n"
-if ! zsh --version &>/dev/null; then
-    if [ "$(uname)" == "Darwin" ]; then
-        brew install zsh
-    else
-        sudo apt install zsh
-    fi
-    chsh -s /usr/local/bin/zsh
-    echo "Successfully installed ZSH"
-else
-    echo "ZSH already installed"
-fi
-
-printf "\nInstalling Neovim 🍃\n"
-if ! nvim --version &>/dev/null; then
-    if [ "$(uname)" == "Darwin" ]; then
-        brew install neovim
-    else
-        sudo apt install neovim
-    fi
-    echo "Successfully installed Neovim"
-else
-    echo "Neovim already installed"
 fi
 
 printf "\nSymlinking·files·🗂\n"
@@ -108,7 +78,6 @@ rm -rf "$dotfiles/zsh/themes"
 rm -rf "$dotfiles/zsh/plugins"
 mkdir "$dotfiles/zsh/themes"
 mkdir "$dotfiles/zsh/plugins"
-
 # Update and download newest versions
 wget -O "$dotfiles/zsh/themes/common.zsh-theme" https://raw.githubusercontent.com/jackharrisonsherlock/common/master/common.zsh-theme
 git clone https://github.com/zsh-users/zsh-autosuggestions "$dotfiles/zsh/plugins/zsh-autosuggestions"
