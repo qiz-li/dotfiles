@@ -30,6 +30,7 @@ elif [ "$(uname)" == "Darwin" ]; then
 else
     echo "Sorry, only macOS & Linux are supported"
     exit 1
+fi
 
 printf "\nInstalling Git 🏷️\n"
 if ! wget --version &>/dev/null; then
