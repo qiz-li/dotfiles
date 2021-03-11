@@ -8,7 +8,7 @@
 dotfiles=$HOME/dotfiles
 
 # Ask for user permission
-read -p "This will overwrite existing files in your home directory. Are you sure? (y/n) " -n 1
+read -rp "This will overwrite existing files in your home directory. Are you sure? (y/n) " -n 1
 echo ""
 if [[ $REPLY =~ ^[Nn]$ ]]; then
     exit 0
@@ -22,11 +22,11 @@ if [ "$(uname)" == "Linux" ]; then
 elif [ "$(uname)" == "Darwin" ]; then
     echo "Installing Homebrew 🍺"
     if ! brew --version &>/dev/null; then
-	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-	echo "Successfully installed Homebrew"
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+        echo "Successfully installed Homebrew"
     else
         echo "Homebrew already installed"
-    fi	
+    fi
 else
     echo "Sorry, only macOS & Linux are supported"
     exit 1
@@ -46,11 +46,11 @@ fi
 
 # Configure Git credentials
 if ! git config user.name &>/dev/null; then
-    read -p 'Git username: ' git_usrname
+    read -rp 'Git username: ' git_usrname
     git config --global user.name "$git_usrname"
 fi
 if ! git config user.email &>/dev/null; then
-    read -p 'Git email: ' git_email
+    read -rp 'Git email: ' git_email
     git config --global user.email "$git_email"
 fi
 
