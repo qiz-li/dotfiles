@@ -1,7 +1,7 @@
 " All custom keybindings in Neovim
 
 " File navigation
-"----------------
+" ---------------
 
 " Use ctrl + m to open NERDTree
 nnoremap <C-m> :NERDTreeToggle<CR>
@@ -18,14 +18,14 @@ nnoremap <C-w> :bn<CR>
 nnoremap <Leader>q :bd<CR>:bn<CR>
 
 " Terminal
-"---------
+" --------
 
 " Open/exit Neovim terminal
 nnoremap <C-t> :bel sp term://zsh<CR>i
 tnoremap <C-t> <C-\><C-n>:q<CR>
 
 " Editor
-"-------
+" ------
 
 " Easy CAPS
 inoremap <C-u> <ESC>g~iw
@@ -38,8 +38,10 @@ nnoremap <C-l> :noh<CR>
 vmap <C-]> >gv
 vmap <C-[> <gv
 
+" Zen mode
+nnoremap <C-k>z :Goyo<CR>
 " Neovim general
-"---------------
+" --------------
 
 " Close Neovim
 nnoremap <C-k>f :wq!<CR>
