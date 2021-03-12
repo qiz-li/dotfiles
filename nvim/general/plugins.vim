@@ -3,18 +3,26 @@
 call plug#begin('~/.config/nvim/autoload/plugged')
 
     " Files
+    " -----
     " File explorer
     Plug 'scrooloose/NERDTree'
-    " Airline status
+    " Improved status bar
     Plug 'vim-airline/vim-airline'
 
     " Syntax
+    " ------
     " CoC intellisense
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     " Better syntax support
     Plug 'sheerun/vim-polyglot'
 
+    " Editor
+    " ------
+    " Zen mode
+    Plug 'junegunn/goyo.vim'
+
     " Themes
+    " ------
     " One Dark 
     Plug 'joshdick/onedark.vim'
     " Gruvbox 
