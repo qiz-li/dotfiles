@@ -32,7 +32,7 @@ inoremap <C-u> <ESC>g~iw
 nnoremap <C-u> g~iw<Esc>
 
 " Clear screen search highlighting
-nnoremap <C-l> :noh<CR>
+nnoremap <C-k>l :noh<CR>
 
 " Visual mode indent text like VSCode
 vmap <C-]> >gv
@@ -40,11 +40,13 @@ vmap <C-[> <gv
 
 " Zen mode
 nnoremap <C-k>z :Goyo<CR>
+
 " Neovim general
 " --------------
 
-" Close Neovim
-nnoremap <C-k>f :wq!<CR>
+" Classic save/close
+nnoremap <C-q> :q<CR>
+nnoremap <C-s> :w<CR>
 
 " Easier Neovim config reload
 nnoremap <Leader>vr :source $MYVIMRC<CR>

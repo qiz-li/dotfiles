@@ -36,3 +36,8 @@ shell:
   program: /bin/zsh
   args:
     - --login
+
+key_bindings:
+  # Copy/paste with shift + ctrl (like on Windows)
+  - { key: V,    mods:    Control|Shift, action: Paste }
+  - { key: C,    mods:    Control|Shift, action: Copy }
