@@ -4,7 +4,7 @@
 " ---------------
 
 " Use ctrl + m to open NERDTree
-nnoremap <silent><C-m> :NERDTreeToggle<CR>
+nnoremap <silent><Space> :NERDTreeToggle<CR>
 
 " User ctrl + hjkl to switch between windows
 nnoremap <C-h> <C-w>h
@@ -27,6 +27,9 @@ tnoremap <silent><C-t> <C-\><C-n>:q<CR>
 " Editor
 " ------
 
+" Revamp redo since ctrl + r is used to run code
+nnoremap <C-y> <C-r>
+
 " Easy CAPS
 inoremap <C-u> <ESC>g~iw
 nnoremap <C-u> g~iw<Esc>
@@ -35,8 +38,12 @@ nnoremap <C-u> g~iw<Esc>
 nnoremap <silent><C-k>l :noh<CR>
 
 " Visual mode indent text like VSCode
-vmap <C-]> >gv
-vmap <C-[> <gv
+vnoremap <C-]> >gv
+vnoremap <C-[> <gv
+
+" Visual mode indent text like VSCode
+vnoremap <silent>K :m '<-2<CR>gv-gv
+vnoremap <silent>J :m '>+1<CR>gv-gv
 
 " Zen mode
 nnoremap <silent><C-k>z :Goyo<CR>
