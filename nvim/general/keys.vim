@@ -48,6 +48,9 @@ vnoremap <silent>J :m '>+1<CR>gv-gv
 " Zen mode
 nnoremap <silent><C-k>z :Goyo<CR>
 
+" Limelight highlighting
+nnoremap <silent><C-k>i :Limelight!!<CR>
+
 " Neovim general
 " --------------
 
