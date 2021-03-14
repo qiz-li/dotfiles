@@ -22,6 +22,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " ------
     " Zen mode
     Plug 'junegunn/goyo.vim'
+    " Highlight only current part
+    Plug 'junegunn/limelight.vim'
 
     " Themes
     " ------
