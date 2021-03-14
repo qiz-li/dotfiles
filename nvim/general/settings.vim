@@ -10,6 +10,5 @@ set formatoptions-=cro                  " Stop newline continution of comments
 set ts=4 sw=4 sts=4 et                  " Tab as 4 spaces
 set lcs+=space:·,trail:·                " Show spaces as dots
 set list                                " Show spaces by default
-
-au! BufWritePost $MYVIMRC source %      " Auto source after writing to init.vm
+set cursorline                          " Highlight current line
 
