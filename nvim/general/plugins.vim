@@ -6,6 +6,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " -----
     " File explorer
     Plug 'scrooloose/NERDTree'
+    " File icons
+    Plug 'ryanoasis/vim-devicons'
+    " File syntax highlighting
+    Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
     " Improved status bar
     Plug 'vim-airline/vim-airline'
 
