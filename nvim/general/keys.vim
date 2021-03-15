@@ -4,7 +4,7 @@
 " ---------------
 
 " Use ctrl + m to open NERDTree
-nnoremap <silent><Space> :NERDTreeToggle<CR>
+nnoremap <silent><C-m> :NERDTreeToggle<CR>
 
 " User ctrl + hjkl to switch between windows
 nnoremap <C-h> <C-w>h
@@ -46,10 +46,13 @@ vnoremap <silent>K :m '<-2<CR>gv-gv
 vnoremap <silent>J :m '>+1<CR>gv-gv
 
 " Zen mode
-nnoremap <silent><C-k>z :Goyo<CR>
+nnoremap <silent><Leader>z :Goyo<CR>
 
 " Limelight highlighting
-nnoremap <silent><C-k>i :Limelight!!<CR>
+nnoremap <silent><Leader>i :Limelight!!<CR>
+
+" Git diff
+nnoremap <silent><Leader>g :SignifyToggleHighlight<CR>
 
 " Neovim general
 " --------------

@@ -17,6 +17,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'sheerun/vim-polyglot'
     " Running code
     Plug 'sbdchd/vim-run'
+    " Git diff
+    Plug 'mhinz/vim-signify'
 
     " Editor
     " ------
