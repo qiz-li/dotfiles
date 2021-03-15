@@ -23,8 +23,8 @@ scrolling:
 
 font:
   normal:
-    family: Cascadia Code
-    style: SemiLight
+    family: FiraCode Nerd Font
+    style: Light
   size: 12.0
 
 cursor:

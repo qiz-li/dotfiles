@@ -7,3 +7,6 @@ zsh/themes
 # We will install them later
 nvim/autoload/plug.vim
 nvim/autoload/plugged
+
+# NERDTree history file
+nvim/.netrwhist

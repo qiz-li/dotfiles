@@ -51,6 +51,14 @@ for package in "${packages[@]}"; do
     fi
 done
 
+# Install Nerd Font
+if [ "$(uname)" == "Darwin" ]; then
+    printf "\nInstalling Fira Code Nerd Font 🤓\n"
+    brew tap homebrew/cask-fonts
+    brew install --cask font-fira-code-nerd-font
+    echo "Successfully installed Nerd Font"
+fi
+
 # Configure Git credentials
 if ! git config user.name &>/dev/null; then
     read -rp 'Git username: ' git_usrname
