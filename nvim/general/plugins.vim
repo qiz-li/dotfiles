@@ -5,7 +5,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Files
     " -----
     " File explorer
-    Plug 'scrooloose/NERDTree'
+    Plug 'preservim/nerdtree'
+    " Git status on file tree
+    Plug 'Xuyuanp/nerdtree-git-plugin'
     " File icons
     Plug 'ryanoasis/vim-devicons'
     " File syntax highlighting
