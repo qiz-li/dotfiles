@@ -2,14 +2,18 @@
 
 ![Screenshot of terminal](images/screenshot.png)
 
-- **Shell**: [ZSH](/zsh) 💤
-- **OS**: Mac & WSL 💻
-- **Editor**: [Neovim](/nvim) ⌨️
-- **Terminal**: [Alacritty](/alacritty) 💨
+## Overview 🏔
+
+- **Shell**: [`ZSH 🚀`](/zsh)
+- **OS**: `Mac & WSL ✨`
+- **Editor**: [`Neovim ⌨️`](/nvim)
+- **Terminal**: [`Alacritty 💨`](/alacritty)
+
+## Install 📦
 
 ```shell
-# Install by cloning from GitHub
+# Clone from GitHub
 cd && git clone https://github.com/ilzq/dotfiles.git
-# and running install script
+# Run install script
 cd dotfiles && ./install.sh
 ```
