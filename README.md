@@ -2,14 +2,14 @@
 
 ![Screenshot of terminal](images/screenshot.png)
 
-## Overview 🏔
+## Overview
 
 - **Shell**: [`ZSH 🚀`](/zsh)
 - **OS**: `Mac & WSL ✨`
 - **Editor**: [`Neovim ⌨️`](/nvim)
 - **Terminal**: [`Alacritty 💨`](/alacritty)
 
-## Install 📦
+## Install
 
 ```shell
 # Clone from GitHub
