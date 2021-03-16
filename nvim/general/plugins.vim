@@ -4,6 +4,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     " Files
     " -----
+    " Start screen
+    Plug 'mhinz/vim-startify'
     " File explorer
     Plug 'preservim/nerdtree'
     " Git status on file tree
