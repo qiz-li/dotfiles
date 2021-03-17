@@ -1,5 +1,13 @@
 # .*dot*files.
 
+```shell
+cd && git clone https://github.com/ilzq/dotfiles.git
+```
+
+```shell
+cd dotfiles && ./install.sh
+```
+
 ![Screenshot of terminal](images/screenshot.png)
 
 ## Overview
@@ -9,12 +17,3 @@
 - **OS**: `Mac || WSL ✨`
 - **Terminal**: [`Alacritty 💨`](/alacritty)
 
-## Install
-
-```shell
-cd && git clone https://github.com/ilzq/dotfiles.git
-```
-
-```shell
-cd dotfiles && ./install.sh
-```
