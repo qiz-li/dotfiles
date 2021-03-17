@@ -5,15 +5,16 @@
 ## Overview
 
 - **Shell**: [`ZSH 🚀`](/zsh)
-- **OS**: `Mac & WSL ✨`
 - **Editor**: [`Neovim ⌨️`](/nvim)
+- **OS**: `Mac || WSL ✨`
 - **Terminal**: [`Alacritty 💨`](/alacritty)
 
 ## Install
 
 ```shell
-# Clone from GitHub
 cd && git clone https://github.com/ilzq/dotfiles.git
-# Run install script
+```
+
+```shell
 cd dotfiles && ./install.sh
 ```
