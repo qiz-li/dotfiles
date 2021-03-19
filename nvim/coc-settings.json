@@ -10,6 +10,7 @@
         "json",
         "python"
     ],
+    "snippets.userSnippetsDirectory": "~/.config/nvim/snips",
     "suggest.enablePreview": true,
     "diagnostic.virtualText": true,
     "diagnostic.virtualTextCurrentLineOnly": false,
