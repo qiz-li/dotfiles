@@ -6,6 +6,10 @@ export DOTFILES=$HOME/dotfiles
 # Path to oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+# Fix issues with Git signing
+# https://github.com/keybase/keybase-issues/issues/2798
+export GPG_TTY=$(tty)
+
 # Love this theme, elegant and clean!
 # https://github.com/jackharrisonsherlock/common
 ZSH_THEME="common"
