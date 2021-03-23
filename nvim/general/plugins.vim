@@ -36,6 +36,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'junegunn/limelight.vim'
     " Markdown preview
     Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+    " Used for yamllint
+    Plug 'neomake/neomake'
 
     " Themes
     " ------
