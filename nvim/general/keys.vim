@@ -3,9 +3,6 @@
 " File navigation
 " ---------------
 
-" Use ctrl + m to open NERDTree
-nnoremap <silent><C-m> :NERDTreeToggle<CR>
-
 " User ctrl + hjkl to switch between windows
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
@@ -45,24 +42,12 @@ vnoremap <C-[> <gv
 vnoremap <silent>K :m '<-2<CR>gv-gv
 vnoremap <silent>J :m '>+1<CR>gv-gv
 
-" Zen mode
-nnoremap <silent><Leader>z :Goyo<CR>
-
-" Limelight highlighting
-nnoremap <silent><Leader>i :Limelight!!<CR>
-
-" Git diff
-nnoremap <silent><Leader>g :SignifyToggleHighlight<CR>
-
 " Neovim general
 " --------------
 
 " Classic save/close
 nnoremap <silent><C-q> :q<CR>
 nnoremap <silent><C-s> :w<CR>
-
-" Running code with vim-run
-nnoremap <silent><C-r> :Run<CR>i
 
 " Easier Neovim config reload
 nnoremap <silent><Leader>vr :source $MYVIMRC<CR>

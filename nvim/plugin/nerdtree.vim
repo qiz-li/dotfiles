@@ -22,3 +22,5 @@ augroup nerdtreehidecwd
           \ | setlocal concealcursor=n
 augroup end
 
+" Use ctrl + m to open NERDTree
+nnoremap <silent><C-m> :NERDTreeToggle<CR>
