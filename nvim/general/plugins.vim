@@ -17,6 +17,13 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Improved status bar
     Plug 'vim-airline/vim-airline'
 
+    " Git
+    " ---
+    " Git diff
+    Plug 'airblade/vim-gitgutter'
+    " Git commands
+    Plug 'tpope/vim-fugitive'
+
     " Syntax
     " ------
     " CoC intellisense
@@ -47,14 +54,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'morhetz/gruvbox'
     " Nord
     Plug 'arcticicestudio/nord-vim'
-
-    " Git
-    " ---
-    " Git diff
-    Plug 'mhinz/vim-signify'
-    " Git commands
-    Plug 'tpope/vim-fugitive'
-
 
 call plug#end()
 
