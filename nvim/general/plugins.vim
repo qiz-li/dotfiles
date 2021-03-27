@@ -24,6 +24,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Git commands
     Plug 'tpope/vim-fugitive'
 
+    " Telescope fzf
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'junegunn/fzf.vim'
+
     " Syntax
     " ------
     " CoC intellisense

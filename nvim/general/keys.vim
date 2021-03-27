@@ -10,7 +10,6 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 " Switching between and exiting buffers
-nnoremap <silent><C-p> :ls<CR>:b<Space>
 nnoremap <silent><C-w> :bn<CR>
 nnoremap <silent><Leader>q :bd<CR>:bn<CR>
 
