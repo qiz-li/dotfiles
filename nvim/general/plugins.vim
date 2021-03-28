@@ -16,6 +16,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
     " Improved status bar
     Plug 'vim-airline/vim-airline'
+    " FZF
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'junegunn/fzf.vim'
 
     " Git
     " ---
@@ -23,10 +26,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'airblade/vim-gitgutter'
     " Git commands
     Plug 'tpope/vim-fugitive'
-
-    " Telescope fzf
-    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-    Plug 'junegunn/fzf.vim'
 
     " Syntax
     " ------
@@ -49,6 +48,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
     " Used for yamllint
     Plug 'neomake/neomake'
+    " Writing tool
+    Plug 'reedes/vim-pencil'
 
     " Themes
     " ------
