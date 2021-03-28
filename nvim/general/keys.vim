@@ -37,9 +37,12 @@ nnoremap <silent><C-k>l :noh<CR>
 vnoremap <C-]> >gv
 vnoremap <C-[> <gv
 
-" Visual mode indent text like VSCode
+" Visual mode move lines up/down
 vnoremap <silent>K :m '<-2<CR>gv-gv
 vnoremap <silent>J :m '>+1<CR>gv-gv
+
+" Spell checking
+nnoremap <silent><Leader>s :setlocal spell!<CR>gv-gv
 
 " Neovim general
 " --------------
