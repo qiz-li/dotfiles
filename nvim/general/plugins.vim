@@ -15,6 +15,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " File syntax highlighting
     Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
     " Improved status bar
+    Plug 'vim-airline/vim-airline-themes'
     Plug 'vim-airline/vim-airline'
     " FZF
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
