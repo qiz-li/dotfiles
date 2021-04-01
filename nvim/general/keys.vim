@@ -42,7 +42,10 @@ vnoremap <silent>K :m '<-2<CR>gv-gv
 vnoremap <silent>J :m '>+1<CR>gv-gv
 
 " Spell checking
-nnoremap <silent><Leader>s :setlocal spell!<CR>gv-gv
+nnoremap <silent><Leader>s :setlocal spell!<CR>
+
+" Copy to universal pasteboard
+vnoremap <C-c> :w !pbcopy<CR><CR>
 
 " Neovim general
 " --------------
