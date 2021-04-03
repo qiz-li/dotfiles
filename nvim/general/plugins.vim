@@ -51,6 +51,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'neomake/neomake'
     " Writing tool
     Plug 'reedes/vim-pencil'
+    " Commenting code
+    Plug 'tpope/vim-commentary'
 
     " Themes
     " ------
