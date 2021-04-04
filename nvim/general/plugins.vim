@@ -38,8 +38,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'sbdchd/vim-run'
     " Snippets
     Plug 'honza/vim-snippets'
-
-    " Editor
+" Editor
     " ------
     " Zen mode
     Plug 'junegunn/goyo.vim'
@@ -53,6 +52,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'reedes/vim-pencil'
     " Commenting code
     Plug 'tpope/vim-commentary'
+    " Easily surround code in quotes
+    Plug 'tpope/vim-surround'
 
     " Themes
     " ------
