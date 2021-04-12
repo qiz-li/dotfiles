@@ -8,5 +8,5 @@ zsh/themes
 nvim/autoload/plug.vim
 nvim/autoload/plugged
 
-# NERDTree history file
-nvim/.netrwhist
+# Netrw file explorer
+NetrwTreeListing

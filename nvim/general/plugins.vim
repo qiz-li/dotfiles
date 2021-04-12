@@ -6,14 +6,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " -----
     " Start screen
     Plug 'mhinz/vim-startify'
-    " File explorer
-    Plug 'preservim/nerdtree'
-    " Git status on file tree
-    Plug 'Xuyuanp/nerdtree-git-plugin'
     " File icons
     Plug 'ryanoasis/vim-devicons'
-    " File syntax highlighting
-    Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
     " Improved status bar
     Plug 'vim-airline/vim-airline-themes'
     Plug 'vim-airline/vim-airline'
@@ -38,7 +32,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'sbdchd/vim-run'
     " Snippets
     Plug 'honza/vim-snippets'
-" Editor
+
+    " Editor
     " ------
     " Zen mode
     Plug 'junegunn/goyo.vim'
