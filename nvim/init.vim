@@ -7,6 +7,6 @@ source $HOME/.config/nvim/general/settings.vim
 " Custom Keybindings
 source $HOME/.config/nvim/general/keys.vim
 
-" Nord theme
-source $HOME/.config/nvim/themes/nord.vim
+" Ayu theme
+source $HOME/.config/nvim/general/theme.vim
 

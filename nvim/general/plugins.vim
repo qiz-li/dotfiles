@@ -52,12 +52,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     " Themes
     " ------
-    " One Dark 
-    Plug 'joshdick/onedark.vim'
-    " Gruvbox 
-    Plug 'morhetz/gruvbox'
-    " Nord
-    Plug 'arcticicestudio/nord-vim'
+    " Ayu
+    Plug 'ayu-theme/ayu-vim'
 
 call plug#end()
 
