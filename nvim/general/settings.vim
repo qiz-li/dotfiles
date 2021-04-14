@@ -1,14 +1,20 @@
 " All general settings in Neovim
 
-let mapleader = ","                     " Much better leader key
-syntax enable                           " Enables syntax highlighing
-set number                              " Line numbers
-set aw awa                              " Auto write/save
-set nowrap                              " Display long lines as just one line
-set laststatus=0                        " No need for status line
-set formatoptions-=cro                  " Stop newline continution of comments
-set ts=4 sw=4 sts=4 et                  " Tab as 4 spaces
-set lcs+=space:·,trail:·                " Show spaces as dots
-set list                                " Show spaces by default
+set encoding=utf-8
+scriptencoding utf-8
+
+syntax enable                           " Enables syntax highlighting
+let mapleader=','                       " Much better leader key
+set autowrite autowriteall              " Auto write/save
+
 set cursorline                          " Highlight current line
+set number relativenumber               " Relative line numbers
+set list listchars+=space:·,trail:·     " Show spaces as dots
+set tabstop=4 shiftwidth=4 expandtab    " Tabs as four spaces
+
+" Stop automatic comment continuation
+augroup NO_COMMENT
+    autocmd!
+    autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
+augroup END
 
