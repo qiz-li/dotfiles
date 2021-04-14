@@ -8,9 +8,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'mhinz/vim-startify'
     " File icons
     Plug 'ryanoasis/vim-devicons'
-    " Improved status bar
-    Plug 'vim-airline/vim-airline-themes'
-    Plug 'vim-airline/vim-airline'
     " FZF
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
@@ -58,7 +55,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 call plug#end()
 
 " Auto-install missing plugins
-autocmd VimEnter *
-  \  if !empty(filter(copy(g:plugs), '!isdirectory(v:val.dir)'))
-  \|   PlugInstall | q
-  \| endif
+augroup plug
+    autocmd VimEnter *
+      \  if !empty(filter(copy(g:plugs), '!isdirectory(v:val.dir)'))
+      \|   PlugInstall | q
+      \| endif
+augroup END
