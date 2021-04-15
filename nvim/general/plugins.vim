@@ -38,8 +38,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'junegunn/limelight.vim'
     " Markdown preview
     Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
-    " Used for yamllint
-    Plug 'neomake/neomake'
+    " In editor linting
+    Plug 'dense-analysis/ale'
     " Writing tool
     Plug 'reedes/vim-pencil'
     " Commenting code
@@ -54,10 +54,3 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
 call plug#end()
 
-" Auto-install missing plugins
-augroup plug
-    autocmd VimEnter *
-      \  if !empty(filter(copy(g:plugs), '!isdirectory(v:val.dir)'))
-      \|   PlugInstall | q
-      \| endif
-augroup END
