@@ -40,8 +40,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
     " In editor linting
     Plug 'dense-analysis/ale'
-    " Writing tool
-    Plug 'reedes/vim-pencil'
     " Commenting code
     Plug 'tpope/vim-commentary'
     " Easily surround code in quotes
