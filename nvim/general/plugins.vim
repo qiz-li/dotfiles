@@ -8,13 +8,13 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'mhinz/vim-startify'
     " File icons
     Plug 'ryanoasis/vim-devicons'
-    " FZF
+    " FZF fuzzy finder
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
 
     " Git
     " ---
-    " Git diff
+    " Git gutter diffs
     Plug 'airblade/vim-gitgutter'
     " Git commands
     Plug 'tpope/vim-fugitive'
@@ -23,12 +23,12 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " ------
     " CoC intellisense
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    " Better syntax support
+    " Better syntax highlighting
     Plug 'sheerun/vim-polyglot'
-    " Running code
-    Plug 'sbdchd/vim-run'
     " Snippets
     Plug 'honza/vim-snippets'
+    " Ayu theme
+    Plug 'ayu-theme/ayu-vim'
 
     " Editor
     " ------
@@ -38,17 +38,12 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'junegunn/limelight.vim'
     " Markdown preview
     Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
-    " In editor linting
+    " In-editor linting
     Plug 'dense-analysis/ale'
     " Commenting code
     Plug 'tpope/vim-commentary'
     " Easily surround code in quotes
     Plug 'tpope/vim-surround'
-
-    " Themes
-    " ------
-    " Ayu
-    Plug 'ayu-theme/ayu-vim'
 
 call plug#end()
 
