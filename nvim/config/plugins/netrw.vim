@@ -1,11 +1,15 @@
+"   _   _      _
+"  | \ | |    | |
+"  |  \| | ___| |_ _ ____      __
+"  | . ` |/ _ \ __| '__\ \ /\ / /
+"  | |\  |  __/ |_| |   \ V  V /
+"  |_| \_|\___|\__|_|    \_/\_/
+
 " Stop Netrw from creating [No Name] buffers
 augroup AutoDeleteNetrwHiddenBuffers
   au!
   au FileType netrw setlocal bufhidden=wipe
 augroup end
-
-" Shortcut to toggle
-map <silent> <C-E> :Lexplore!<CR>
 
 " Hide dotfiles by default
 let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'

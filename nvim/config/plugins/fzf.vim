@@ -1,7 +1,10 @@
-" Quick shortcut
-nnoremap <silent> <C-p> :Files<CR>
+"     ____      ____
+"    / __/___  / __/
+"   / /_/_  / / /_
+"  / __/ / /_/ __/
+" /_/   /___/_/
 
-" Match Vim colors
+" Match Vim theme colors
 let g:fzf_colors =
 \ { 'fg':      ['fg', 'Normal'],
   \ 'bg':      ['bg', 'Normal'],
