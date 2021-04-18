@@ -13,6 +13,7 @@ let g:startify_custom_header = ['Life is good.']
 let g:startify_bookmarks = [
             \ { 'd': '~/dotfiles' },
             \ { 'p': '~/documents/code/ilzq' },
+            \ { 'h': '/volumes/config' },
             \ ]
 
 " Hide current buffer 0
