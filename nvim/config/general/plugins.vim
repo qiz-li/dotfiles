@@ -11,10 +11,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 " Files
 " -----
 
-" Start screen
-Plug 'mhinz/vim-startify'
-" File icons
-Plug 'ryanoasis/vim-devicons'
 " FZF fuzzy finder
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -47,8 +43,6 @@ Plug 'ayu-theme/ayu-vim'
 
 " Zen mode
 Plug 'junegunn/goyo.vim'
-" Highlight only current part
-Plug 'junegunn/limelight.vim'
 " Markdown preview
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 " In-editor linting
