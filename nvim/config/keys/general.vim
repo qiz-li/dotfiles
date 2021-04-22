@@ -9,9 +9,9 @@
 " General keybinds
 " ----------------
 
-" Leader + s/q save or quit
-nnoremap <Leader>q :q<CR>
-nnoremap <Leader>s :w<CR>
+" Leader + s/w save or quit
+noremap <Leader>w :q<CR>
+noremap <Leader>s :up<CR>
 
 " Leader + r reload config
-nnoremap <Leader>r :source $MYVIMRC<CR>
+noremap <Leader>r :source $MYVIMRC<CR>
