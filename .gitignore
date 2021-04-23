@@ -4,9 +4,13 @@ zsh/plugins
 zsh/themes
 
 # Same with Neovim plugins
-# We will install them later
 nvim/autoload/plug.vim
 nvim/autoload/plugged
 
 # Netrw file explorer
 NetrwTreeListing
+nvim/.netrwhist
+
+# Neovim spell check
+nvim/spell/
+
