@@ -3,7 +3,6 @@
 - **Shell**: [`ZSH ⛱`](/zsh)
 - **Editor**: [`Neovim 🍋`](/nvim)
 - **Terminal**: [`Alacritty 🌞`](/alacritty)
-- **Install**:
 
 ```shell
 cd && git clone https://github.com/ilzq/dotfiles.git
