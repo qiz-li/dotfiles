@@ -1,5 +1,10 @@
 # .*dot*files.
 
+- **Shell**: [`ZSH ⛱`](/zsh)
+- **Editor**: [`Neovim 🍋`](/nvim)
+- **Terminal**: [`Alacritty 🌞`](/alacritty)
+- **Install**:
+
 ```shell
 cd && git clone https://github.com/ilzq/dotfiles.git
 ```
@@ -9,11 +14,3 @@ cd dotfiles && ./install.sh
 ```
 
 ![Screenshot of terminal](images/screenshot.png)
-
-## Overview
-
-- **Shell**: [`ZSH 🚀`](/zsh)
-- **Editor**: [`Neovim ⌨️`](/nvim)
-- **OS**: `Mac || WSL ✨`
-- **Terminal**: [`Alacritty 💨`](/alacritty)
-
