@@ -1,0 +1,40 @@
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/core"
+
+# Neovim related
+# --------------
+tap "neovim/neovim"
+brew "neovim"
+# Show good previews
+brew "bat"
+# Fuzzy find files
+brew "fzf"
+# Nerd font to get icons
+tap "homebrew/cask-fonts"
+cask "font-fira-code-nerd-font"
+# Linters
+# -------
+# Yaml
+brew "yamllint"
+# Shell
+brew "shellcheck"
+
+# Git related
+# -----------
+brew "git"
+# Git signing
+brew "gpg"
+# Pin entry for Git signing
+brew "pinentry-mac"
+
+# Other
+# -----
+brew "zsh"
+# To show system info
+brew "neofetch"
+# Retrieve info from web
+brew "wget"
+# Heroku CLI
+tap "heroku/brew"
+brew "heroku/brew/heroku"
