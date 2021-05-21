@@ -1,19 +1,15 @@
-# ZSH 💤
+# Overview
 
-([Oh My](https://github.com/ohmyzsh/ohmyzsh)) Zsh setup with great features such as:
+- [`zsh`](https://github.com/zsh-users/zsh) - Powerful interactive shell and scripting interpreter
+  - [`antigen`](https://github.com/zsh-users/antigen) - Easy to use Zsh plugin manager
+    - [`common`](https://github.com/jackharrisonsherlock/common) - Simple and clean prompt
+    - [`zsh-autosuggestions`](https://github.com/zsh-users/zsh-autosuggestions) - Useful auto-completions based on history
+    - [`zsh-syntax-highlighting`](https://github.com/zsh-users/zsh-syntax-highlighting) - Fish-like beautiful syntax highlighting
 
-- Simple [prompt](https://github.com/jackharrisonsherlock/common) 🚀
-- Useful [suggestions](https://github.com/zsh-users/zsh-autosuggestions) 📖
-- Good-looking syntax [highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) 👍
+**What's inside?**
 
-and awesome functions such as:
-
-**`create`**
-
-Used to create new projects:
-
-1. Creating a new project folder
-2. Publishing on GitHub with README & license
-3. Set up virtual environment when using Python
-4. Open VSCode
-5. Done!
+- [`.zshenv`](.zshenv) - Environment variables
+- [`.zshrc`](.zshrc) - Prompt and plugins
+- [`.zalias`](.zalias) - Custom and plugined aliases
+- [`.zlogin`](.zlogin) - Neofetch to show system info
+- [`create.zsh`](create.zsh) - _Currently deactivated_
