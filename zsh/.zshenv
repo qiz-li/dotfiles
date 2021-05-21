@@ -1,5 +1,8 @@
 # Path to dotfiles
-export ZDOTDIR=$HOME/dotfiles/zsh
+export DOTDIR=~/dotfiles
+
+# Path to Zsh config
+export ZDOTDIR=$DOTDIR/zsh
 
 # GitHub token
 export GITHUB_TOKEN=$(security find-generic-password -s 'GitHub Token' -w)
