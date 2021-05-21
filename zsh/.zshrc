@@ -12,6 +12,9 @@ source $HOME/.antigen.zsh
 # Custom aliases
 source $ZDOTDIR/.zalias
 
+# Use Vi keybinds
+bindkey -v
+
 # -------
 # Plugins
 # -------
@@ -23,7 +26,7 @@ AUTO_LS_COMMANDS=(ls)
 # No newline at the end
 AUTO_LS_NEWLINE=false
 
-# Suggests an alias if exits
+# Suggests an alias if exists
 antigen bundle MichaelAquilina/zsh-you-should-use
 
 # Auto-completion based on history
@@ -41,6 +44,3 @@ autoload -U colors && colors
 setopt promptsubst
 
 antigen apply
-
-# Use Vi mode
-bindkey -v
