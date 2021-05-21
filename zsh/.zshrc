@@ -1,60 +1,46 @@
-# Oh-my-zsh config files!
+#  ______   _____ _    _
+# |___  /  / ____| |  | |
+#    / /  | (___ | |__| |
+#   / /    \___ \|  __  |
+#  / /__   ____) | |  | |
+# /_____| |_____/|_|  |_|
 
-# Path to dotfiles.
-export DOTFILES=$HOME/dotfiles
+# Install antigen package manager if missing
+[[ ! -f $HOME/.antigen.zsh ]] && curl -L git.io/antigen > .antigen.zsh
+source $HOME/.antigen.zsh
 
-# Path to oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+# Custom aliases
+source $ZDOTDIR/.zalias
 
-# Fix issues with Git signing
-# https://github.com/keybase/keybase-issues/issues/2798
-export GPG_TTY=$(tty)
+# -------
+# Plugins
+# -------
 
-# Love this theme, elegant and clean!
-# https://github.com/jackharrisonsherlock/common
-ZSH_THEME="common"
+# List files upon changing directory
+antigen bundle desyncr/auto-ls
+# Only list files (no Git status)
+AUTO_LS_COMMANDS=(ls)
+# No newline at the end
+AUTO_LS_NEWLINE=false
 
-# Oh-my-zsh auto-update
-DISABLE_UPDATE_PROMPT="true"
+# Suggests an alias if exits
+antigen bundle MichaelAquilina/zsh-you-should-use
 
-# Uncomment the following line if pasting URLs and other text is messed up.
-DISABLE_MAGIC_FUNCTIONS="true"
+# Auto-completion based on history
+antigen bundle zsh-users/zsh-autosuggestions
+# Change suggestion color so it is visible
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=7"
 
-# Command auto-correction.
-ENABLE_CORRECTION="true"
+# Fish-like syntax highlighting
+antigen bundle zsh-users/zsh-syntax-highlighting
 
-# Disable marking untracked files under VCS as dirty
-DISABLE_UNTRACKED_FILES_DIRTY="true"
+# Clean minimal prompt
+antigen theme jackharrisonsherlock/common
+# Enable colors and prompt expansion
+autoload -U colors && colors
+setopt promptsubst
 
-# Dotfiles as custom folder
-ZSH_CUSTOM=$DOTFILES/zsh
-
-# Oh-my-zsh plugins
-plugins=(git
-         nvm
-         zsh-syntax-highlighting
-         zsh-autosuggestions)
-
-# Starting oh-my-zsh
-source $ZSH/oh-my-zsh.sh
-
-# User configuration
-
-# Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='mvim'
-fi
+antigen apply
 
 # Use Vi mode
 bindkey -v
-
-# Fzf Nord theme
-export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
---color pointer:#BF616A,info:#4C566A,spinner:#4C566A,header:#4C566A,prompt:#81A1C1,marker:#EBCB8B
-'
-
-# Fzf completion & keybindings
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-

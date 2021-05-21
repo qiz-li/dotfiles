@@ -1,9 +1,13 @@
-# Ignore custom Zsh plugins & themes
-# We will install them in our install script
-zsh/plugins
-zsh/themes
+# Zsh
+# ---
 
-# Same with Neovim plugins
+# History
+zsh/.zsh_history
+
+# Neovim
+# ------
+
+# Plugins & themes
 nvim/autoload/plug.vim
 nvim/autoload/plugged
 
@@ -11,6 +15,6 @@ nvim/autoload/plugged
 NetrwTreeListing
 nvim/.netrwhist
 
-# Neovim spell check
+# Spell check
 nvim/spell/
 
