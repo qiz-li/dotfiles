@@ -5,9 +5,12 @@
 #  / /__   ____) | |  | |
 # /_____| |_____/|_|  |_|
 
-# Install antigen package manager if missing
-[[ ! -f $HOME/.antigen.zsh ]] && curl -L git.io/antigen > .antigen.zsh
-source $HOME/.antigen.zsh
+# Source Antigen from appropriate location
+if [ "$(uname)" == "Darwin" ]; then
+    source $(brew --prefix)/share/antigen/antigen.zsh
+elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+    source /usr/share/zsh-antigen/antigen.zsh
+fi
 
 # Custom aliases
 source $ZDOTDIR/.zalias
@@ -19,20 +22,11 @@ bindkey -v
 # Plugins
 # -------
 
-# List files upon changing directory
-antigen bundle desyncr/auto-ls
-# Only list files (no Git status)
-AUTO_LS_COMMANDS=(ls)
-# No newline at the end
-AUTO_LS_NEWLINE=false
-
 # Suggests an alias if exists
 antigen bundle MichaelAquilina/zsh-you-should-use
 
 # Auto-completion based on history
 antigen bundle zsh-users/zsh-autosuggestions
-# Change suggestion color so it is visible
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=7"
 
 # Fish-like syntax highlighting
 antigen bundle zsh-users/zsh-syntax-highlighting

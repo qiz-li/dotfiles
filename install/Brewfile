@@ -28,11 +28,17 @@ brew "gpg"
 # Pin entry for Git signing
 brew "pinentry-mac"
 
-# Other
+# Terminal related
 # -----
 brew "zsh"
 # To show system info
 brew "neofetch"
+# ZSH package manager
+brew "antigen"
+# Minimal terminal
+cask "alacritty"
+
+# Others
 # Retrieve info from web
 brew "wget"
 # Heroku CLI
