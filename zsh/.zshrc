@@ -6,14 +6,17 @@
 # /_____| |_____/|_|  |_|
 
 # Source Antigen from appropriate location
-if [ "$(uname)" == "Darwin" ]; then
+case "$OSTYPE" in
+"darwin"*)
     source $(brew --prefix)/share/antigen/antigen.zsh
-elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+    ;;
+"linux-gnu"*)
     source /usr/share/zsh-antigen/antigen.zsh
-fi
+    ;;
+esac
 
 # Custom aliases
-source $ZDOTDIR/.zalias
+source $ZDOTDIR/aliases.zsh
 
 # Use Vi keybinds
 bindkey -v
