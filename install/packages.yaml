@@ -1,0 +1,42 @@
+# Git
+# ---
+git:
+# Git signing
+gpg:
+# MacOS pin entry for Git signing
+pinentry-mac:
+  brew:
+
+# Terminal
+# --------
+# The awesome Z shell
+zsh:
+# ZSH package manager
+antigen:
+  brew: antigen
+  apt: zsh-antigen
+# Terminal information bling
+neofetch:
+# Minimal terminal
+alacritty:
+
+# Editor
+# ------
+# GUI code editor
+visual-studio-code:
+  brew:
+# Improved version of Vim, the command line editor
+neovim:
+# Quickly find files, used in Nvim
+fzf:
+# Linters/formatters
+# -
+# For YAML
+yamllint:
+# For Shell script
+shellcheck:
+# For Python
+flake8:
+  pip:
+autopep8:
+  pip:
