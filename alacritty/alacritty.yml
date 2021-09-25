@@ -66,3 +66,8 @@ key_bindings:
   - key: C
     mods: Control|Shift
     action: Copy
+
+  # Clear terminal
+  - key: K
+    mods: Control
+    chars: "\x0c"
