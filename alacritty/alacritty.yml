@@ -3,11 +3,11 @@
 
 window:
   dimensions:
-    columns: 134
-    lines: 43
+    columns: 90
+    lines: 25
   # Avoid conflict with transparent title bar
   padding:
-    x: 10
+    x: 20
     y: 40
   # Spread additional padding evenly around the terminal content
   dynamic_padding: true
