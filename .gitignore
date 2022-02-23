@@ -3,6 +3,7 @@
 
 # History
 zsh/.zsh_history
+zsh/.zsh_sessions/
 
 # Neovim
 # ------
@@ -17,4 +18,3 @@ nvim/.netrwhist
 
 # Spell check
 nvim/spell/
-
