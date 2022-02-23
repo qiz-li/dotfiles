@@ -40,3 +40,8 @@ flake8:
   pip:
 autopep8:
   pip:
+
+# Tools
+# -----
+gnu-sed:
+  brew:

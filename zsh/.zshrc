@@ -34,6 +34,9 @@ antigen bundle zsh-users/zsh-autosuggestions
 # Fish-like syntax highlighting
 antigen bundle zsh-users/zsh-syntax-highlighting
 
+# For feelings
+antigen bundle qiz-li/feeling@main
+
 # Clean minimal prompt
 antigen theme jackharrisonsherlock/common
 # Enable colors and prompt expansion
