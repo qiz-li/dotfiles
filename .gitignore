@@ -3,6 +3,10 @@
 
 zsh/.zsh_history
 zsh/.zsh_sessions/
+.zshrc.zwc
+
+# Zsh completion files
+zsh/.zcompdump
 
 # Device-based local config
 zsh/local.zsh
