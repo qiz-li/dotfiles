@@ -9,10 +9,6 @@ antigen bundle git
 # V as nvim to quickly open files
 alias v="nvim"
 
-# Python links
-alias python3="/usr/local/bin/python3"
-alias pip3="/usr/local/bin/pip3"
-
 # Use gnu versions of tools
 if [[ "$OSTYPE" == "darwin"* ]]; then
     alias sed="gsed"
