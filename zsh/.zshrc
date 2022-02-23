@@ -5,15 +5,12 @@
 #  / /__   ____) | |  | |
 # /_____| |_____/|_|  |_|
 
-# Source Antigen from appropriate location
-case "$OSTYPE" in
-"darwin"*)
-    source $(brew --prefix)/share/antigen/antigen.zsh
-    ;;
-"linux-gnu"*)
-    source /usr/share/zsh-antigen/antigen.zsh
-    ;;
-esac
+# Install antigen if not already installed
+if ! [[ -f $HOME/antigen.zsh ]]; then
+    curl -L git.io/antigen >$HOME/antigen.zsh
+fi
+
+source $HOME/antigen.zsh
 
 # Custom aliases
 source $ZDOTDIR/aliases.zsh

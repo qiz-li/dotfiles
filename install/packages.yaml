@@ -11,10 +11,6 @@ pinentry-mac:
 # --------
 # The awesome Z shell
 zsh:
-# ZSH package manager
-antigen:
-  brew: antigen
-  apt: zsh-antigen
 # Terminal information bling
 neofetch:
 # Minimal terminal
