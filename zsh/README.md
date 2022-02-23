@@ -14,5 +14,5 @@
 - [`.zshrc`](.zshrc) - Prompt and plugins
 - [`.zlogin`](.zlogin) - `feeling` to show feelings
 - [`aliases.zsh`](aliases.zsh) - Custom and plugined aliases
-- [`local.zsh`](local.zsh) - Device-based local config
+- `local.zsh` - Device-specific local config
 - [`create.zsh`](create.zsh) - _Currently deactivated_
