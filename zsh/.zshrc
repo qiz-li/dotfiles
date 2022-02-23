@@ -46,3 +46,6 @@ setopt promptsubst
 antigen apply
 
 source $ZDOTDIR/local.zsh
+
+# Show feelings "calendar"
+feeling
