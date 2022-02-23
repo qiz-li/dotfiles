@@ -1,9 +1,11 @@
 # Zsh
 # ---
 
-# History
 zsh/.zsh_history
 zsh/.zsh_sessions/
+
+# Device-based local config
+zsh/local.zsh
 
 # Neovim
 # ------

@@ -44,3 +44,5 @@ autoload -U colors && colors
 setopt promptsubst
 
 antigen apply
+
+source $ZDOTDIR/local.zsh
