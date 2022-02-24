@@ -18,6 +18,7 @@ case "$OSTYPE" in
     ;;
 "linux-gnu"*)
     sudo apt install python3
+    sudo apt install python3-pip
     ;;
 *)
     echo "Sorry, OS is not supported."
