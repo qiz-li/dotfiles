@@ -5,7 +5,7 @@ git:
 gpg:
 # MacOS pin entry for Git signing
 pinentry-mac:
-  brew:
+  - brew
 
 # Terminal
 # --------
@@ -15,13 +15,13 @@ zsh:
 neofetch:
 # Minimal terminal
 alacritty:
-  brew:
+  - brew
 
 # Editor
 # ------
 # GUI code editor
 visual-studio-code:
-  brew:
+  - brew
 # Improved version of Vim, the command line editor
 neovim:
 # Quickly find files, used in Nvim
@@ -34,13 +34,13 @@ yamllint:
 shellcheck:
 # For Python
 flake8:
-  pip:
+  - pip
 autopep8:
-  pip:
+  - pip
 
 # Tools
 # -----
 gnu-sed:
-  brew:
+  - brew
 curl:
-  apt:
+  - apt
