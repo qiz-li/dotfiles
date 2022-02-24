@@ -42,3 +42,5 @@ autopep8:
 # -----
 gnu-sed:
   brew:
+curl:
+  apt:
