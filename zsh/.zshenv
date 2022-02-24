@@ -8,9 +8,5 @@ export ZDOTDIR=$DOTDIR/zsh
 # https://github.com/keybase/keybase-issues/issues/2798
 export GPG_TTY=$(tty)
 
-# Use vim as editor
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='mvim'
-fi
+# Use Neovim as default editor
+export EDITOR='nvim'
