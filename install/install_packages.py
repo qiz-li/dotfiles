@@ -25,7 +25,7 @@ def main():
     if platform.system() == 'Linux':
         os.system('sudo apt update')
 
-    with open('packages.yaml', 'r') as file:
+    with open(f'{os.path.dirname(__file__)}/packages.yaml', 'r') as file:
         config = yaml.load(file, Loader=yaml.FullLoader)
 
     for key, value in config.items():
