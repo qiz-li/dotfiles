@@ -36,13 +36,18 @@ echo "--------------------------"
 # Symlink files
 printf "Symlinking config files...\n"
 # Zsh
-rm "$HOME"/.zshenv
+[[ -f $HOME/.zshenv ]] && rm "$HOME"/.zshenv
 ln -s "$DOTDIR"/zsh/.zshenv "$HOME"/.zshenv
+[[ -f $HOME/.zshrc ]] && rm "$HOME"/.zshrc
+ln -s "$DOTDIR"/zsh/.zshrc "$HOME"/.zshrc
+# Configs
+# -
+! [[ -r $HOME/.config ]] && mkdir "$HOME"/.config
 # Alacritty
-rm -rf "$HOME"/.config/alacritty
+[[ -r $HOME/.config/alacritty ]] && rm -rf "$HOME"/.config/alacritty
 ln -s "$DOTDIR"/alacritty "$HOME"/.config/alacritty
 # Neovim
-rm -rf "$HOME"/.config/nvim
+[[ -r $HOME/.config/nvim ]] && rm -rf "$HOME"/.config/nvim
 ln -s "$DOTDIR"/nvim "$HOME"/.config/nvim
 echo "--------------------------"
 
