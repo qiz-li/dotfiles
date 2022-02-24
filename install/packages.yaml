@@ -15,6 +15,7 @@ zsh:
 neofetch:
 # Minimal terminal
 alacritty:
+  brew:
 
 # Editor
 # ------
