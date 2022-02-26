@@ -17,26 +17,29 @@ window:
 # Ayu light
 colors:
   primary:
-    background: "#fcfcfc"
-    foreground: "#5c6166"
+    # Background is not in official ayu-colors
+    # However, this is the color of the Ayu Vim theme
+    background: "#FAFAFA"
+    foreground: "#5C6166"
   normal:
-    black: "#0d1017"
+    black: "#5C6166"
     red: "#F07171"
     green: "#86B300"
     yellow: "#F2AE49"
     blue: "#399EE6"
     magenta: "#A37ACC"
     cyan: "#4CBF99"
-    white: "#CCCAC2"
+    white: "#BABDC3"
   bright:
-    black: "#ababab"
+    # Intentionally made lighter for zsh-autosuggestions
+    black: "#9EA7B3"
     red: "#F28779"
-    green: "#D5FF80"
+    green: "#AAD94C"
     yellow: "#FFD173"
     blue: "#73D0FF"
     magenta: "#DFBFFF"
     cyan: "#95E6CB"
-    white: "#f3f4f5"
+    white: "#D1D1D1"
 
 scrolling:
   # Maximum lines in the scrollback buffer
