@@ -24,8 +24,6 @@ visual-studio-code:
   - brew
 # Improved version of Vim, the command line editor
 neovim:
-# Quickly find files, used in Nvim
-fzf:
 # Linters/formatters
 # -
 # For YAML
@@ -44,3 +42,10 @@ gnu-sed:
   - brew
 curl:
   - apt
+
+# File tools
+# ----------
+# Quickly find files (used in Nvim)
+fzf:
+# Easlily naviage between directories
+autojump:

@@ -22,6 +22,17 @@ bindkey -v
 # Plugins
 # -------
 
+# Autojump, easily navigate through directories
+case "$OSTYPE" in
+"darwin"*)
+    [ -f $(brew --prefix)/etc/profile.d/autojump.sh ] &&
+        . $(brew --prefix)/etc/profile.d/autojump.sh
+    ;;
+"linux"*)
+    . /usr/share/autojump/autojump.sh
+    ;;
+esac
+
 # Suggests an alias if exists
 antigen bundle MichaelAquilina/zsh-you-should-use
 
