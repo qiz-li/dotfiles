@@ -1,0 +1,20 @@
+---
+# macOS specific Alacritty settings
+
+window:
+  # Avoid conflict with transparent title bar
+  padding:
+    x: 20
+    y: 40
+  # Only leave the buttons
+  decorations: transparent
+
+font:
+  normal:
+    family: FiraCode Nerd Font
+  size: 19
+
+shell:
+  program: /bin/zsh
+  args:
+    - --login

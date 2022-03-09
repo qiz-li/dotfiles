@@ -1,0 +1,26 @@
+---
+# Windows specific Alacritty settings
+
+window:
+  padding:
+    x: 20
+    y: 20
+  # No text in title bar
+  title: ""
+  dynmatic_title: false
+
+font:
+  normal:
+    family: Cascadia Code
+  size: 13
+
+shell:
+  program: wsl ~
+
+key_bindings:
+  - key: N
+    mods: Control
+    chars: SpawnNewInstance
+  - key: Q
+    mods: Quit
+    chars: SpawnNewInstance
