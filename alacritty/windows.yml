@@ -3,11 +3,11 @@
 
 window:
   padding:
-    x: 20
-    y: 20
+    x: 15
+    y: 15
   # No text in title bar
   title: ""
-  dynmatic_title: false
+  dynamic_title: false
 
 font:
   normal:
@@ -20,7 +20,7 @@ shell:
 key_bindings:
   - key: N
     mods: Control
-    chars: SpawnNewInstance
+    action: SpawnNewInstance
   - key: Q
-    mods: Quit
-    chars: SpawnNewInstance
+    mods: Control
+    action: Quit
