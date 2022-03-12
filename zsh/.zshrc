@@ -18,20 +18,23 @@ source $ZDOTDIR/aliases.zsh
 # Use Vi keybinds
 bindkey -v
 
-# -------
-# Plugins
-# -------
-
-# Autojump, easily navigate through directories
 case "$OSTYPE" in
 "darwin"*)
+    # Initialize autojump
     [ -f $(brew --prefix)/etc/profile.d/autojump.sh ] &&
         . $(brew --prefix)/etc/profile.d/autojump.sh
     ;;
 "linux"*)
+    # Initialize autojump
     . /usr/share/autojump/autojump.sh
+    # Initailize Alacritty config if on WSL
+    grep -qEi "(Microsoft|WSL)" /proc/version &>/dev/null && "$DOTDIR"/alacritty/initialize.sh
     ;;
 esac
+
+# -------
+# Plugins
+# -------
 
 # Suggests an alias if exists
 antigen bundle MichaelAquilina/zsh-you-should-use

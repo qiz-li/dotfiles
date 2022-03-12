@@ -1,16 +1,20 @@
-#! /bin/bash
+#! /bin/zsh
 
-set -e
-# Device is on WSL
+# Copy files to config direction device is on WSL
+# Symlinking does not work as Windows cannot read Linux symlinks
 if grep -qEi "(Microsoft|WSL)" /proc/version &>/dev/null; then
     ALACRITTY_CONFIG_DIR=/mnt/c/Users/"$USER"/AppData/Roaming/alacritty
     device='windows'
-    dir_char='\'
-# Device is on macOS
+    operation='cp'
+    flag=''
+    include_path='C:\Users\'"$USER"'\appdata\roaming\alacritty\'
+# Symlink config files if device is on macOS
 elif [[ "$OSTYPE" = "darwin"* ]]; then
-    device='mac'
     ALACRITTY_CONFIG_DIR="$HOME"/.config/alacritty
-    dir_char='/'
+    device='mac'
+    operation='ln'
+    flag='-s'
+    include_path="$ALACRITTY_CONFIG_DIR"'/'
 else
     echo "Alacritty config does not support your device." >&2
     exit 1
@@ -21,15 +25,15 @@ fi
 
 # Link general config file
 [[ -f "$ALACRITTY_CONFIG_DIR"/general.yml ]] && rm "$ALACRITTY_CONFIG_DIR"/general.yml
-ln -s "$DOTDIR"/alacritty/general.yml "$ALACRITTY_CONFIG_DIR"/general.yml
+"$operation" "$flag" "$DOTDIR"/alacritty/general.yml "$ALACRITTY_CONFIG_DIR"/general.yml
 
 # Link device specific config file
 [[ -f "$ALACRITTY_CONFIG_DIR"/device.yml ]] && rm "$ALACRITTY_CONFIG_DIR"/device.yml
-ln -s "$DOTDIR"/alacritty/"$device".yml "$ALACRITTY_CONFIG_DIR"/device.yml
+"$operation" "$flag" "$DOTDIR"/alacritty/"$device".yml "$ALACRITTY_CONFIG_DIR"/device.yml
 
 # Load both into alacritty.yml
-[[ -f "$ALACRITTY_CONFIG_DIR"/alacritty.yml ]] && rm "$ALACRITTY_CONFIG_DIR"/alacritty.yml
-echo "import:" >>"$ALACRITTY_CONFIG_DIR"/alacritty.yml
-dir_char=/
-echo "  - $ALACRITTY_CONFIG_DIR$dir_char""general.yml" >>"$ALACRITTY_CONFIG_DIR"/alacritty.yml
-echo "  - $ALACRITTY_CONFIG_DIR$dir_char""device.yml" >>"$ALACRITTY_CONFIG_DIR"/alacritty.yml
+{
+    echo "import:"
+    echo "  - $include_path""general.yml"
+    echo "  - $include_path""device.yml"
+} >"$ALACRITTY_CONFIG_DIR"/alacritty.yml
