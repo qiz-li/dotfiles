@@ -45,6 +45,7 @@ ln -sf "$DOTDIR"/zsh/.zshrc "$HOME"/.zshrc
 "$DOTDIR"/alacritty/initialize.sh
 # Neovim
 ln -snf "$DOTDIR"/nvim "$HOME"/.config/nvim
+ln -snf "$DOTDIR"/pandoc "$HOME"/.pandoc
 echo "--------------------------"
 
 # Change shell to Zsh

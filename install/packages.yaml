@@ -49,3 +49,8 @@ curl:
 fzf:
 # Easlily naviage between directories
 autojump:
+
+# Writitng
+# ------------------
+# File type conversions
+pandoc:
