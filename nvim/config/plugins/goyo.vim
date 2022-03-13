@@ -4,7 +4,7 @@
 "         _/ 
 
 " No line highlighting inside Goyo
-autocmd! User GoyoEnter set cursorline!
+autocmd! User GoyoEnter set cursorline! | Limelight 0.7
 " Source vimrc after closing
 " To fix colors that are changed after closing
 autocmd! User GoyoLeave source $MYVIMRC

@@ -36,13 +36,19 @@ Plug 'ayu-theme/ayu-vim'
 " Editor
 " ------
 
-" Zen mode
-Plug 'junegunn/goyo.vim'
 " In-editor linting
 Plug 'dense-analysis/ale'
 " Commenting code
 Plug 'tpope/vim-commentary'
 " Easily surround code in quotes
 Plug 'tpope/vim-surround'
+
+" -------
+" Writing
+" -------
+" Zen mode
+Plug 'junegunn/goyo.vim'
+" Only highlight current part
+Plug 'junegunn/limelight.vim'
 
 call plug#end()
