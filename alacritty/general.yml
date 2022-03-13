@@ -40,6 +40,11 @@ colors:
     cyan: "#95E6CB"
     white: "#D1D1D1"
 
+font:
+  # Use light font to denote italics
+  italic:
+    style: Light
+
 scrolling:
   # Maximum lines in the scrollback buffer
   history: 1000
