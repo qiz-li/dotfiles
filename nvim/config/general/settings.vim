@@ -21,4 +21,3 @@ augroup NO_COMMENT
     autocmd!
     autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
 augroup END
-

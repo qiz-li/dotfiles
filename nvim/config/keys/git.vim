@@ -11,4 +11,3 @@ nnoremap <Leader>gp :Git push<CR>
 " Requires Gitgutter
 " Leader + g + h toggle Git diff highlighint
 nnoremap <silent><Leader>gh :GitGutterLineHighlightsToggle<CR>
-

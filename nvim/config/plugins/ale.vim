@@ -10,4 +10,3 @@ let g:ale_sign_warning='♦'
 
 " No highlights
 let g:ale_set_highlights=0
-

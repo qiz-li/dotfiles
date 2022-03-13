@@ -12,4 +12,3 @@ vnoremap <silent>J :m '>+1<CR>gv-gv
 
 " Ctrl + C copy selected to universal pasteboard
 vnoremap <C-c> :w !pbcopy<CR><CR>
-

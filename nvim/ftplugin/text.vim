@@ -18,4 +18,3 @@ noremap ^ g^
 noremap 0 g0
 noremap I g^i
 noremap A g$a
-

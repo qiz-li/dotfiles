@@ -21,4 +21,3 @@ source $HOME/.config/nvim/config/general/theme.vim
 for rcfile in split(globpath('~/.config/nvim/config/keys', '*.vim'), '\n') 
   execute('source '.rcfile)
 endfor
-

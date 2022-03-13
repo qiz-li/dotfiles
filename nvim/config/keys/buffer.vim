@@ -15,4 +15,3 @@ nnoremap <Leader>bk :resize -5<CR>
 nnoremap <Leader>bj :resize +5<CR>
 nnoremap <Leader>bh :vertical resize -5<CR>
 nnoremap <Leader>bl :vertical resize +5<CR>
-

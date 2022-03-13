@@ -22,4 +22,3 @@ let g:netrw_winsize = 25
 
 " Tree list style
 let g:netrw_liststyle = 3
-

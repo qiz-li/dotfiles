@@ -27,4 +27,3 @@ hi ALEWarningSign guifg=#FFD21F
 hi User1 guibg=#399EE6 guifg=#FFFFFF
 hi User2 guibg=#E6BA7E guifg=#FFFFFF
 hi User3 guibg=#F0F0F0
-

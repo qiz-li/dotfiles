@@ -8,4 +8,3 @@ nnoremap <Leader>cc :setlocal spell!<CR>
 " Leader + c + e/f set English/French
 nnoremap <Leader>ce :setlocal spelllang=en<CR>
 nnoremap <Leader>cr :setlocal spelllang=fr<CR>
-
