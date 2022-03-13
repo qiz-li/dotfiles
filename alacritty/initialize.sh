@@ -12,7 +12,7 @@ elif [[ "$OSTYPE" = "darwin"* ]]; then
     ALACRITTY_CONFIG_DIR="$HOME"/.config/alacritty
     device='mac'
     operation='ln'
-    flag='-s'
+    flag='-sf'
     include_path="$ALACRITTY_CONFIG_DIR"/
 else
     echo "Alacritty config does not support your device." >&2
@@ -22,17 +22,23 @@ fi
 # Creat Alacritty config directory
 ! [[ -d "$ALACRITTY_CONFIG_DIR" ]] && mkdir -p "$ALACRITTY_CONFIG_DIR"
 
-# Link general config file
-[[ -f "$ALACRITTY_CONFIG_DIR"/general.yml ]] && rm "$ALACRITTY_CONFIG_DIR"/general.yml
-"$operation" ${flag:+$flag} "$DOTDIR"/alacritty/general.yml "$ALACRITTY_CONFIG_DIR"/general.yml
+link_alacritty_config() {
+    if ! [[ -f $2 ]] || ! diff -sq "$1" "$2" &>/dev/null; then
+        "$operation" ${flag:+$flag} "$1" "$2"
+    fi
+}
 
-# Link device specific config file
-[[ -f "$ALACRITTY_CONFIG_DIR"/device.yml ]] && rm "$ALACRITTY_CONFIG_DIR"/device.yml
-"$operation" ${flag:+$flag} "$DOTDIR"/alacritty/"$device".yml "$ALACRITTY_CONFIG_DIR"/device.yml
+link_alacritty_config "$DOTDIR"/alacritty/general.yml \
+    "$ALACRITTY_CONFIG_DIR"/general.yml
 
-# Load both into alacritty.yml
-{
-    echo "import:"
-    echo "  - $include_path""general.yml"
-    echo "  - $include_path""device.yml"
-} >"$ALACRITTY_CONFIG_DIR"/alacritty.yml
+link_alacritty_config "$DOTDIR"/alacritty/"$device".yml \
+    "$ALACRITTY_CONFIG_DIR"/device.yml
+
+# Load into alacritty.yml
+if ! [[ -f "$ALACRITTY_CONFIG_DIR"/alacritty.yml ]]; then
+    {
+        echo "import:"
+        echo "  - $include_path""general.yml"
+        echo "  - $include_path""device.yml"
+    } >"$ALACRITTY_CONFIG_DIR"/alacritty.yml
+fi
