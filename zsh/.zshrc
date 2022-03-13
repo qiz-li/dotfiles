@@ -15,6 +15,9 @@ source $HOME/antigen.zsh
 # Custom aliases
 source $ZDOTDIR/aliases.zsh
 
+# Script for markdown & docx conversion
+source "$DOTDIR"/pandoc/wr.sh
+
 # Use Vi keybinds
 bindkey -v
 
