@@ -1,15 +1,13 @@
-autocmd! User GoyoEnter set cursorline! | noremap <Leader>w :Goyo<CR>
-autocmd! User GoyoLeave noremap <Leader>w :q<CR>
+" /~~\
+" |  __/~\\  //~\
+"  \__/\_/ \/ \_/
+"         _/ 
 
-" Auto start Goyo if editing markdown or text files
-" Added here because using ftplugin does not work for some reason
-function! s:auto_goyo()
-    if &ft == 'markdown' || &ft == 'text'
-      Goyo 80
-    elseif exists('#goyo')
-      let bufnr = bufnr('%')
-      Goyo!
-      execute 'b '.bufnr
-    endif
-endfunction
-autocmd BufEnter * call s:auto_goyo()
+" No line highlighting inside Goyo
+autocmd! User GoyoEnter set cursorline!
+" Source vimrc after closing
+" To fix colors that are changed after closing
+autocmd! User GoyoLeave source $MYVIMRC
+
+" Shortcut to start Goyo
+nnoremap <silent><Leader>i :Goyo<CR>
