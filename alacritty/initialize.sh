@@ -6,15 +6,14 @@ if grep -qEi "(Microsoft|WSL)" /proc/version &>/dev/null; then
     ALACRITTY_CONFIG_DIR=/mnt/c/Users/"$USER"/AppData/Roaming/alacritty
     device='windows'
     operation='cp'
-    flag=''
-    include_path='C:\Users\'"$USER"'\appdata\roaming\alacritty\'
+    include_path='C:\\Users\\'"$USER"'\\appdata\\roaming\\alacritty\\'
 # Symlink config files if device is on macOS
 elif [[ "$OSTYPE" = "darwin"* ]]; then
     ALACRITTY_CONFIG_DIR="$HOME"/.config/alacritty
     device='mac'
     operation='ln'
     flag='-s'
-    include_path="$ALACRITTY_CONFIG_DIR"'/'
+    include_path="$ALACRITTY_CONFIG_DIR"/
 else
     echo "Alacritty config does not support your device." >&2
     exit 1
@@ -25,11 +24,11 @@ fi
 
 # Link general config file
 [[ -f "$ALACRITTY_CONFIG_DIR"/general.yml ]] && rm "$ALACRITTY_CONFIG_DIR"/general.yml
-"$operation" "$flag" "$DOTDIR"/alacritty/general.yml "$ALACRITTY_CONFIG_DIR"/general.yml
+"$operation" ${flag:+$flag} "$DOTDIR"/alacritty/general.yml "$ALACRITTY_CONFIG_DIR"/general.yml
 
 # Link device specific config file
 [[ -f "$ALACRITTY_CONFIG_DIR"/device.yml ]] && rm "$ALACRITTY_CONFIG_DIR"/device.yml
-"$operation" "$flag" "$DOTDIR"/alacritty/"$device".yml "$ALACRITTY_CONFIG_DIR"/device.yml
+"$operation" ${flag:+$flag} "$DOTDIR"/alacritty/"$device".yml "$ALACRITTY_CONFIG_DIR"/device.yml
 
 # Load both into alacritty.yml
 {
