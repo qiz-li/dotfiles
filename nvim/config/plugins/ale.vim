@@ -10,3 +10,6 @@ let g:ale_sign_warning='♦'
 
 " No highlights
 let g:ale_set_highlights=0
+
+" Toggle linting
+nnoremap <silent><leader>a :ALEToggle<cr>
