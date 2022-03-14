@@ -15,6 +15,9 @@ fi
 case "$OSTYPE" in
 "darwin"*)
     brew install python3
+    # Tap into brew fonts
+    # Needed for font installation
+    brew tap homebrew/cask-fonts
     ;;
 "linux-gnu"*)
     sudo apt install python3

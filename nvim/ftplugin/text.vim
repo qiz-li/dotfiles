@@ -19,4 +19,8 @@ noremap 0 g0
 noremap I g^i
 noremap A g$a
 
+" Disable linting
 ALEDisable
+
+" Conceal bold/italic/links...
+set conceallevel=2

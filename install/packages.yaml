@@ -16,6 +16,9 @@ neofetch:
 # Minimal terminal
 alacritty:
   - brew
+# Terminal font
+font-cascadia-code:
+  - brew
 
 # Editor
 # ------
