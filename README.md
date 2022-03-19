@@ -26,6 +26,9 @@ cd && git clone https://github.com/qiz-li/dotfiles.git && ./dotfiles/install/ins
     - [`surround`](https://github.com/tpope/vim-surround) - Quickly and easy way to surround stuff with quotes, brackets+
 - [`pandoc`](https://github.com/jgm/pandoc) - Universal document converter
   - [`wr`](pandoc/wr.sh) - Custom Markdown <-> DOCX conversion script
+- [`nvm`](https://github.com/nvm-sh/nvm) - Node Version Manager
+  - [`node`](https://github.com/nodejs/node) - Server-side JavaScript runtime environment
+  - [`npm`](https://github.com/npm/cli) - The package manager for JavaScript
 - [`zsh`](https://github.com/zsh-users/zsh) - Powerful interactive shell and scripting interpreter
   - [`antigen`](https://github.com/zsh-users/antigen) - Easy-to-use-Zsh plugin manager
     - [`autosuggestions`](https://github.com/zsh-users/zsh-autosuggestions) - Useful auto-completion based on history

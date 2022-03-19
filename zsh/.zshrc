@@ -21,6 +21,18 @@ source "$DOTDIR"/pandoc/wr.sh
 # Use Vi keybinds
 bindkey -v
 
+# Loads nvm
+load_nvm() {
+    export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" ||
+        printf %s "${XDG_CONFIG_HOME}/nvm")"
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+}
+load_nvm
+# Install nvm, if not already installed
+! command -v nvm &>/dev/null &&
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash &&
+    load_nvm
+
 case "$OSTYPE" in
 "darwin"*)
     # Initialize autojump
@@ -63,3 +75,4 @@ antigen apply
 
 # Show feelings "calendar"
 feeling
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
