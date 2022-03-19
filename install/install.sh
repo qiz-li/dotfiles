@@ -20,8 +20,8 @@ case "$OSTYPE" in
     brew tap homebrew/cask-fonts
     ;;
 "linux-gnu"*)
-    sudo apt install python3
-    sudo apt install python3-pip
+    sudo apt install -y python3
+    sudo apt install -y python3-pip
     ;;
 *)
     echo "Sorry, OS is not supported."
