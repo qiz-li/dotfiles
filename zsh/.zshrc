@@ -29,9 +29,12 @@ load_nvm() {
 }
 load_nvm
 # Install nvm, if not already installed
-! command -v nvm &>/dev/null &&
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash &&
+if ! command -v nvm &>/dev/null; then
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
     load_nvm
+    # Install Node.js
+    nvm install stable
+fi
 
 case "$OSTYPE" in
 "darwin"*)
