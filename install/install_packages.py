@@ -21,7 +21,7 @@ def install(package, installers):
 
     elif platform.system() == 'Linux' and 'apt' in installers:
         print_message(package)
-        os.system(f'sudo apt install {package}')
+        os.system(f'sudo apt install -y {package}')
 
 
 def main():
