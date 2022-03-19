@@ -36,4 +36,4 @@ cd && git clone https://github.com/qiz-li/dotfiles.git && ./dotfiles/install/ins
   - [`autojump`](https://github.com/wting/autojump) - Quick directory navigation that learns off history
   - [`fzf`](https://github.com/junegunn/fzf) - Command-line fuzzy finder
 
-Readme format heavily inspired by [`@kutsan`](https://github.com/kutsan)/[`dotfiles`](https://github.com/kutsan/dotfiles)
+> Readme format heavily inspired by [`@kutsan`](https://github.com/kutsan)/[`dotfiles`](https://github.com/kutsan/dotfiles)
