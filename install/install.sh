@@ -69,8 +69,8 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
         read -rp "Do you want to generate a SSH key for GitHub (y/n) " -n 1
         echo
         if [[ $REPLY =~ ^[Yy]$ ]]; then
-            ! [[ -d $HOME/.ssh/public_keys]] && mkdir "$HOME"/.ssh/public_keys
-            ! [[ -d $HOME/.ssh/private_keys]] && mkdir "$HOME"/.ssh/private_keys
+            ! [[ -d $HOME/.ssh/public_keys ]] && mkdir "$HOME"/.ssh/public_keys
+            ! [[ -d $HOME/.ssh/private_keys ]] && mkdir "$HOME"/.ssh/private_keys
             read -rp "Enter your email: " email
             ssh-keygen -t ed25519 -C "$email" -f "$HOME"/.ssh/private_keys/github_ed25519
             mv "$HOME"/.ssh/private_keys/github_ed25519.pub \
