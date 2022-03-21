@@ -59,6 +59,27 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
 else
     echo "Git settings not synced."
 fi
+# SSH
+read -rp "Do you want to sync SSH settings? Username will be set to qiz-li (y/n) " -n 1
+echo
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+    ln -sf "$DOTDIR"/ssh/config "$HOME"/.ssh/config
+    if ! [[ -f $HOME/.ssh/private_keys/github_ed25519 ]]; then
+        read -rp "Do you want to generate a SSH key for GitHub (y/n) " -n 1
+        echo
+        if [[ $REPLY =~ ^[Yy]$ ]]; then
+            read -rp "Enter your email: " email
+            ssh-keygen -t ed25519 -C "$email" -f "$HOME"/.ssh/private_keys/github_ed25519
+            mv "$HOME"/.ssh/private_keys/github_ed25519.pub \
+                "$HOME"/.ssh/public_keys/github_ed25519.pub
+            echo "Copy your public key to GitHub:"
+            cat "$HOME"/.ssh/public_keys/github_ed25519.pub
+        fi
+    fi
+    echo "SSH settings synced."
+else
+    echo "SSH settings not synced."
+fi
 echo "--------------------------"
 
 # Change shell to Zsh

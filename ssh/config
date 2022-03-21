@@ -1,0 +1,11 @@
+Host *
+  AddKeysToAgent yes
+  UseKeychain yes
+
+Host github.com
+  User git
+  IdentityFile ~/.ssh/private_keys/github_ed25519
+
+Host base.local
+  User qzli
+  IdentityFile ~/.ssh/private_keys/base_rsa

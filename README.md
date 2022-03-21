@@ -30,6 +30,7 @@ cd && git clone https://github.com/qiz-li/dotfiles.git && ./dotfiles/install/ins
 - [`nvm`](https://github.com/nvm-sh/nvm) - Node Version Manager
   - [`node`](https://github.com/nodejs/node) - Server-side JavaScript runtime environment
   - [`npm`](https://github.com/npm/cli) - The package manager for JavaScript
+- [`ssh`](https://github.com/openssh/openssh-portable) - Protocol for secure remote connections
 - [`zsh`](https://github.com/zsh-users/zsh) - Powerful interactive shell and scripting interpreter
   - [`antigen`](https://github.com/zsh-users/antigen) - Easy-to-use-Zsh plugin manager
     - [`autosuggestions`](https://github.com/zsh-users/zsh-autosuggestions) - Useful auto-completion based on history
