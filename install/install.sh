@@ -63,11 +63,14 @@ fi
 read -rp "Do you want to sync SSH settings? Username will be set to qiz-li (y/n) " -n 1
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]; then
+    ! [[ -d $HOME/.ssh ]] && mkdir "$HOME"/.ssh
     ln -sf "$DOTDIR"/ssh/config "$HOME"/.ssh/config
     if ! [[ -f $HOME/.ssh/private_keys/github_ed25519 ]]; then
         read -rp "Do you want to generate a SSH key for GitHub (y/n) " -n 1
         echo
         if [[ $REPLY =~ ^[Yy]$ ]]; then
+            ! [[ -d $HOME/.ssh/public_keys]] && mkdir "$HOME"/.ssh/public_keys
+            ! [[ -d $HOME/.ssh/private_keys]] && mkdir "$HOME"/.ssh/private_keys
             read -rp "Enter your email: " email
             ssh-keygen -t ed25519 -C "$email" -f "$HOME"/.ssh/private_keys/github_ed25519
             mv "$HOME"/.ssh/private_keys/github_ed25519.pub \
