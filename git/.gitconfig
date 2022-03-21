@@ -1,0 +1,10 @@
+[user]
+    name = qiz-li
+    email = 47799695+qiz-li@users.noreply.github.com
+    signingKey = qiz-li
+[core]
+    excludesfile = ~/.gitignore
+[commit]
+    gpgsign = true
+[init]
+    defaultBranch = main

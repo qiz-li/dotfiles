@@ -33,7 +33,7 @@ echo "-------------------"
 # Install Python dependencies
 # in order to run the install packages script
 python3 -m pip install pyYaml
-python3 "$DOTDIR"/install/install_packages.py
+# python3 "$DOTDIR"/install/install_packages.py
 echo "--------------------------"
 
 # Symlink files
@@ -49,6 +49,16 @@ ln -sf "$DOTDIR"/zsh/.zshrc "$HOME"/.zshrc
 # Neovim
 ln -snf "$DOTDIR"/nvim "$HOME"/.config/nvim
 ln -snf "$DOTDIR"/pandoc "$HOME"/.pandoc
+# Git
+read -rp "Do you want to sync Git settings? Username will be set to qiz-li (y/n) " -n 1
+echo
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+    ln -sf "$DOTDIR"/git/.gitconfig "$HOME"/.gitconfig
+    ln -sf "$DOTDIR"/git/.gitignore "$HOME"/.gitignore
+    echo "Git settings synced."
+else
+    echo "Git settings not synced."
+fi
 echo "--------------------------"
 
 # Change shell to Zsh

@@ -9,6 +9,7 @@ cd && git clone https://github.com/qiz-li/dotfiles.git && ./dotfiles/install/ins
 
 - [`alacritty`](https://github.com/alacritty/alacritty) - Terminal emulator written in Rust
   - [`ayu`](https://github.com/ayu-theme/ayu-colors) - Simple, bright, and elegant theme
+- [`git`](https://github.com/git/git) - The version control system
 - [`neovim`](https://github.com/neovim/neovim) - Vim-fork focused on extensibility and usability
   - [`vim-plug`](https://github.com/junegunn/vim-plug) - Minimalistic Vim plugin manager
     - [`ale`](https://github.com/dense-analysis/ale) - Linting engine for Neovim

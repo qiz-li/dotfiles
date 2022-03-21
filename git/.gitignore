@@ -1,0 +1,14 @@
+# VSCode settings
+.vscode/
+
+# macOS
+.DS_Store
+
+# Design files
+design/
+
+# Python virtual environment
+.venv/
+
+# C++ raw excutables
+build/
