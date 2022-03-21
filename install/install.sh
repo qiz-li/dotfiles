@@ -7,7 +7,7 @@ export DOTDIR=$HOME/dotfiles
 read -rp "This will overwrite existing files. Are you sure? (y/n) " -n 1
 echo
 echo "-------------------"
-if [[ $REPLY =~ ^[Nn]$ ]]; then
+if ! [[ $REPLY =~ ^[Yy]$ ]]; then
     exit 0
 fi
 
