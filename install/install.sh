@@ -33,7 +33,7 @@ echo "-------------------"
 # Install Python dependencies
 # in order to run the install packages script
 python3 -m pip install pyYaml
-# python3 "$DOTDIR"/install/install_packages.py
+python3 "$DOTDIR"/install/install_packages.py
 echo "--------------------------"
 
 # Symlink files
