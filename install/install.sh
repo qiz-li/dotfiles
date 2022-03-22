@@ -33,7 +33,7 @@ echo "-------------------"
 # Install Python dependencies
 # in order to run the install packages script
 python3 -m pip install pyYaml
-python3 "$DOTDIR"/install/install_packages.py
+# python3 "$DOTDIR"/install/install_packages.py
 echo "--------------------------"
 
 # Symlink files
@@ -82,6 +82,24 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     echo "SSH settings synced."
 else
     echo "SSH settings not synced."
+fi
+# GPG
+read -rp "Do you want to sync GPG settings? (y/n) " -n 1
+echo
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+    ! [[ -d $HOME/.gnupg ]] && mkdir "$HOME"/.gnupg
+    # On WSL
+    if grep -qEi "(Microsoft|WSL)" /proc/version &>/dev/null; then
+        ln -sf "$DOTDIR"/gpg/wsl.conf "$HOME"/.gnupg/gpg-agent.conf
+    # On macOS
+    elif [[ "$OSTYPE" = "darwin"* ]]; then
+        ln -sf "$DOTDIR"/gpg/mac.conf "$HOME"/.gnupg/gpg-agent.conf
+    else
+        echo "GPG config does not support your device." >&2
+    fi
+    echo "GPG settings synced."
+else
+    echo "GPG settings not synced."
 fi
 echo "--------------------------"
 
