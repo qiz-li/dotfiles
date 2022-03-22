@@ -63,6 +63,9 @@ antigen bundle zsh-users/zsh-autosuggestions
 # Fish-like syntax highlighting
 antigen bundle zsh-users/zsh-syntax-highlighting
 
+# Fish-like history search
+antigen bundle zsh-users/zsh-history-substring-search
+
 # For feelings
 antigen bundle qiz-li/feeling@main
 
@@ -73,6 +76,13 @@ autoload -U colors && colors
 setopt promptsubst
 
 antigen apply
+
+# Zsh substring search keybindings
+# Needs to be after `antigen apply`
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+bindkey -M vicmd 'k' history-substring-search-up
+bindkey -M vicmd 'j' history-substring-search-down
 
 [[ -f $ZDOTDIR/local.zsh ]] && source $ZDOTDIR/local.zsh
 

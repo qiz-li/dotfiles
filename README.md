@@ -37,6 +37,7 @@ cd && git clone https://github.com/qiz-li/dotfiles.git && ./dotfiles/install/ins
     - [`autosuggestions`](https://github.com/zsh-users/zsh-autosuggestions) - Useful auto-completion based on history
     - [`common`](https://github.com/jackharrisonsherlock/common) - Simple and clean Zsh prompt
     - [`feeling`](https://github.com/qiz-li/feeling) - Feelings calendar
+    - [`history-substring-search`](https://github.com/zsh-users/zsh-history-substring-search) - Fish-like helpful command history search
     - [`syntax-highlighting`](https://github.com/zsh-users/zsh-syntax-highlighting) - Fish-like beautiful syntax highlighting
     - [`you-should-use`](https://github.com/MichaelAquilina/zsh-you-should-use) - Helpful alias suggestions
   - [`autojump`](https://github.com/wting/autojump) - Quick directory navigation that learns off history
