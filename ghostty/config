@@ -12,6 +12,10 @@ font-family = Cascadia Code
 font-style = SemiLight
 font-size = 19
 
+# Window
+window-padding-x = 20
+window-padding-y = 10
+
 # Minimal titlebar
 macos-titlebar-proxy-icon = hidden
 title = " "
