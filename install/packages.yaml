@@ -13,8 +13,8 @@ pinentry-mac:
 zsh:
 # Terminal information bling
 neofetch:
-# Minimal terminal
-alacritty:
+# Fast, native terminal
+ghostty:
   - brew
 # Terminal font
 font-cascadia-code:

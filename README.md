@@ -7,7 +7,7 @@ cd && git clone https://github.com/qiz-li/dotfiles.git && ./dotfiles/install/ins
 
 ![Screenshot of shell and Vim](images/screenshot.png)
 
-- [`alacritty`](https://github.com/alacritty/alacritty) - Terminal emulator written in Rust
+- [`ghostty`](https://github.com/ghostty-org/ghostty) - Fast, native terminal emulator
   - [`ayu`](https://github.com/ayu-theme/ayu-colors) - Simple, bright, and elegant theme
 - [`git`](https://github.com/git/git) - The version control system
 - [`gpg`](https://github.com/gpg/gnupg) - GNU tool for PGP encryption, currently used for Git commit signing

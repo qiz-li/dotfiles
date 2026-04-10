@@ -44,8 +44,8 @@ ln -sf "$DOTDIR"/zsh/.zshrc "$HOME"/.zshrc
 # Configs
 # -
 ! [[ -d $HOME/.config ]] && mkdir "$HOME"/.config
-# Alacritty
-"$DOTDIR"/alacritty/initialize.sh
+# Ghostty
+"$DOTDIR"/ghostty/initialize.sh
 # Neovim
 ln -snf "$DOTDIR"/nvim "$HOME"/.config/nvim
 ln -snf "$DOTDIR"/pandoc "$HOME"/.pandoc

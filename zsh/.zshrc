@@ -21,6 +21,18 @@ source "$DOTDIR"/pandoc/wr.sh
 # Use Vi keybinds
 bindkey -v
 
+# Cursor style for vi modes (DECSCUSR)
+zle-keymap-select() {
+    if [[ $KEYMAP == vicmd ]]; then
+        echo -ne '\e[6 q'  # steady bar for command mode
+    else
+        echo -ne '\e[3 q'  # blinking underline for insert mode
+    fi
+}
+zle -N zle-keymap-select
+zle-line-init() { echo -ne '\e[3 q' }
+zle -N zle-line-init
+
 # Loads nvm
 load_nvm() {
     export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" ||

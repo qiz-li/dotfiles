@@ -1,0 +1,42 @@
+# _____ __              __  __
+#/ ____| |            | | | |
+#| |  __| |__   ___  ___| |_| |_ _   _
+#| | |_ | '_ \ / _ \/ __| __| __| | | |
+#| |__| | | | | (_) \__ \ |_| |_| |_| |
+# \_____|_| |_|\___/|___/\__|\__|\__, |
+#                                 __/ |
+#                                |___/
+
+# Font
+font-family = Cascadia Code
+font-style = SemiLight
+font-size = 19
+
+# Minimal titlebar
+macos-titlebar-proxy-icon = hidden
+title = " "
+
+# Ayu Light
+background = #FAFAFA
+foreground = #5C6166
+
+# Normal colors
+palette = 0=#5C6166
+palette = 1=#F07171
+palette = 2=#86B300
+palette = 3=#F2AE49
+palette = 4=#399EE6
+palette = 5=#A37ACC
+palette = 6=#4CBF99
+palette = 7=#BABDC3
+
+# Bright colors
+# Bright black intentionally lighter for zsh-autosuggestions
+palette = 8=#9EA7B3
+palette = 9=#F28779
+palette = 10=#AAD94C
+palette = 11=#FFD173
+palette = 12=#73D0FF
+palette = 13=#DFBFFF
+palette = 14=#95E6CB
+palette = 15=#D1D1D1
