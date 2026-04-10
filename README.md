@@ -12,18 +12,15 @@ cd && git clone https://github.com/qiz-li/dotfiles.git && ./dotfiles/install/ins
 - [`git`](https://github.com/git/git) - The version control system
 - [`gpg`](https://github.com/gpg/gnupg) - GNU tool for PGP encryption, currently used for Git commit signing
 - [`neovim`](https://github.com/neovim/neovim) - Vim-fork focused on extensibility and usability
-  - [`vim-plug`](https://github.com/junegunn/vim-plug) - Minimalistic Vim plugin manager
-    - [`ale`](https://github.com/dense-analysis/ale) - Linting engine for Neovim
-      - [`autopep8`](https://github.com/hhatto/autopep8) - Formatter for Python to match PEP 8 style guide
-      - [`flake8`](https://github.com/PyCQA/flake8) - Linter for Python files
-      - [`shellcheck`](https://github.com/koalaman/shellcheck) - Analysis tool for shell scripts
-      - [`yamllint`](https://github.com/adrienverge/yamllint) - Linter for YAML files
+  - [`lazy.nvim`](https://github.com/folke/lazy.nvim) - Modern plugin manager for Neovim
     - [`ayu`](https://github.com/ayu-theme/ayu-vim) - Ayu theme, Vim edition
     - [`commentary`](https://github.com/tpope/vim-commentary) - Quick and easy way to comment stuff out
-    - [`fugative`](https://github.com/tpope/vim-fugitive) - Awesome Git wrapper for Vim
+    - [`fugitive`](https://github.com/tpope/vim-fugitive) - Awesome Git wrapper for Vim
     - [`gitgutter`](https://github.com/airblade/vim-gitgutter) - Git diff markers in Vim gutter
     - [`goyo`](https://github.com/junegunn/goyo.vim) - Zen mode in Vim
     - [`limelight`](https://github.com/junegunn/limelight.vim) - Focus-enhancing text highlighting
+    - [`lspconfig`](https://github.com/neovim/nvim-lspconfig) - Quickstart configs for Neovim's built-in LSP
+    - [`mason`](https://github.com/williamboman/mason.nvim) - Portable package manager for LSP servers
     - [`polyglot`](https://github.com/sheerun/vim-polyglot) - Solid language pack for syntax highlighting
     - [`surround`](https://github.com/tpope/vim-surround) - Quickly and easy way to surround stuff with quotes, brackets+
 - [`pandoc`](https://github.com/jgm/pandoc) - Universal document converter

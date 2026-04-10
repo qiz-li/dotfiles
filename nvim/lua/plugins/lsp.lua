@@ -1,0 +1,36 @@
+return {
+  {
+    "williamboman/mason.nvim",
+    build = ":MasonUpdate",
+    config = function()
+      require("mason").setup()
+    end,
+  },
+  {
+    "williamboman/mason-lspconfig.nvim",
+    dependencies = {
+      "williamboman/mason.nvim",
+      "neovim/nvim-lspconfig",
+    },
+    config = function()
+      require("mason-lspconfig").setup()
+    end,
+  },
+  {
+    "neovim/nvim-lspconfig",
+    config = function()
+      vim.diagnostic.config({
+        signs = {
+          text = {
+            [vim.diagnostic.severity.ERROR] = "✖",
+            [vim.diagnostic.severity.WARN] = "♦",
+            [vim.diagnostic.severity.INFO] = "♦",
+            [vim.diagnostic.severity.HINT] = "♦",
+          },
+        },
+        virtual_text = false,
+        update_in_insert = false,
+      })
+    end,
+  },
+}

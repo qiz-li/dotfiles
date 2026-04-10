@@ -14,9 +14,8 @@ zsh/local.zsh
 # Neovim
 # ------
 
-# Plugins & themes
-nvim/autoload/plug.vim
-nvim/autoload/plugged
+# Plugin lock file
+nvim/lazy-lock.json
 
 # Netrw file explorer
 NetrwTreeListing
