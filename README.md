@@ -30,7 +30,7 @@ cd && git clone https://github.com/qiz-li/dotfiles.git && ./dotfiles/install/ins
   - [`npm`](https://github.com/npm/cli) - The package manager for JavaScript
 - [`ssh`](https://github.com/openssh/openssh-portable) - Protocol for secure remote connections
 - [`zsh`](https://github.com/zsh-users/zsh) - Powerful interactive shell and scripting interpreter
-  - [`antigen`](https://github.com/zsh-users/antigen) - Easy-to-use-Zsh plugin manager
+  - [`zinit`](https://github.com/zdharma-continuum/zinit) - Fast Zsh plugin manager with turbo mode
     - [`autosuggestions`](https://github.com/zsh-users/zsh-autosuggestions) - Useful auto-completion based on history
     - [`common`](https://github.com/jackharrisonsherlock/common) - Simple and clean Zsh prompt
     - [`feeling`](https://github.com/qiz-li/feeling) - Feelings calendar

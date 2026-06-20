@@ -5,12 +5,13 @@
 #  / /__   ____) | |  | |
 # /_____| |_____/|_|  |_|
 
-# Install antigen if not already installed
-if ! [[ -f $HOME/antigen.zsh ]]; then
-    curl -L git.io/antigen >$HOME/antigen.zsh
+# Install zinit if not already installed
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+if ! [[ -f $ZINIT_HOME/zinit.zsh ]]; then
+    mkdir -p "$(dirname $ZINIT_HOME)"
+    git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 fi
-
-source $HOME/antigen.zsh
+source "$ZINIT_HOME/zinit.zsh"
 
 # Custom aliases
 source $ZDOTDIR/aliases.zsh
@@ -60,35 +61,26 @@ esac
 # Plugins
 # -------
 
-# Suggests an alias if exists
-antigen bundle MichaelAquilina/zsh-you-should-use
-
-# Auto-completion based on history
-antigen bundle zsh-users/zsh-autosuggestions
-
-# Fish-like syntax highlighting
-antigen bundle zsh-users/zsh-syntax-highlighting
-
-# Fish-like history search
-antigen bundle zsh-users/zsh-history-substring-search
-
-# For feelings
-antigen bundle qiz-li/feeling@main
-
-# Clean minimal prompt
-antigen theme jackharrisonsherlock/common
-# Enable colors and prompt expansion
+# Prompt (loaded immediately)
 autoload -U colors && colors
 setopt promptsubst
+zinit light jackharrisonsherlock/common
 
-antigen apply
+# For feelings
+zinit light qiz-li/feeling
 
-# Zsh substring search keybindings
-# Needs to be after `antigen apply`
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
-bindkey -M vicmd 'k' history-substring-search-up
-bindkey -M vicmd 'j' history-substring-search-down
+# Turbo-loaded plugins (deferred until after prompt renders)
+zinit wait lucid for \
+    OMZP::common-aliases \
+    OMZP::git \
+    MichaelAquilina/zsh-you-should-use \
+    zsh-users/zsh-autosuggestions \
+    atload"bindkey '^[[A' history-substring-search-up; \
+           bindkey '^[[B' history-substring-search-down; \
+           bindkey -M vicmd 'k' history-substring-search-up; \
+           bindkey -M vicmd 'j' history-substring-search-down" \
+    zsh-users/zsh-history-substring-search \
+    zsh-users/zsh-syntax-highlighting
 
 [[ -f $ZDOTDIR/local.zsh ]] && source $ZDOTDIR/local.zsh
 
