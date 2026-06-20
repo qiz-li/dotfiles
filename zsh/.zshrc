@@ -47,15 +47,7 @@ node() { _load_nvm; node "$@"; }
 npm() { _load_nvm; npm "$@"; }
 npx() { _load_nvm; npx "$@"; }
 
-case "$OSTYPE" in
-"darwin"*)
-    [ -f /opt/homebrew/etc/profile.d/autojump.sh ] &&
-        . /opt/homebrew/etc/profile.d/autojump.sh
-    ;;
-"linux"*)
-    . /usr/share/autojump/autojump.sh
-    ;;
-esac
+eval "$(zoxide init zsh --cmd j)"
 
 # -------
 # Plugins

@@ -37,7 +37,7 @@ cd && git clone https://github.com/qiz-li/dotfiles.git && ./dotfiles/install/ins
     - [`history-substring-search`](https://github.com/zsh-users/zsh-history-substring-search) - Fish-like helpful command history search
     - [`syntax-highlighting`](https://github.com/zsh-users/zsh-syntax-highlighting) - Fish-like beautiful syntax highlighting
     - [`you-should-use`](https://github.com/MichaelAquilina/zsh-you-should-use) - Helpful alias suggestions
-  - [`autojump`](https://github.com/wting/autojump) - Quick directory navigation that learns off history
+  - [`zoxide`](https://github.com/ajeetdsouza/zoxide) - Quick directory navigation that learns off history
   - [`fzf`](https://github.com/junegunn/fzf) - Command-line fuzzy finder
 
 > Readme format heavily inspired by [`@kutsan`](https://github.com/kutsan)/[`dotfiles`](https://github.com/kutsan/dotfiles)
