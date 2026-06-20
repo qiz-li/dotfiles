@@ -33,32 +33,26 @@ zle -N zle-keymap-select
 zle-line-init() { echo -ne '\e[3 q' }
 zle -N zle-line-init
 
-# Loads nvm
-load_nvm() {
-    export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" ||
-        printf %s "${XDG_CONFIG_HOME}/nvm")"
+# Lazy-load nvm (sourcing nvm.sh eagerly costs ~2.3s)
+export NVM_DIR="$HOME/.nvm"
+export PATH="$NVM_DIR/versions/node/v26.1.0/bin:$PATH"
+
+_load_nvm() {
+    unfunction nvm node npm npx 2>/dev/null
     [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 }
-load_nvm
-# Install nvm, if not already installed
-if ! command -v nvm &>/dev/null; then
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-    load_nvm
-    # Install Node.js
-    nvm install stable
-fi
+nvm() { _load_nvm; nvm "$@"; }
+node() { _load_nvm; node "$@"; }
+npm() { _load_nvm; npm "$@"; }
+npx() { _load_nvm; npx "$@"; }
 
 case "$OSTYPE" in
 "darwin"*)
-    # Initialize autojump
-    [ -f $(brew --prefix)/etc/profile.d/autojump.sh ] &&
-        . $(brew --prefix)/etc/profile.d/autojump.sh
+    [ -f /opt/homebrew/etc/profile.d/autojump.sh ] &&
+        . /opt/homebrew/etc/profile.d/autojump.sh
     ;;
 "linux"*)
-    # Initialize autojump
     . /usr/share/autojump/autojump.sh
-    # Initailize Alacritty config if on WSL
-    grep -qEi "(Microsoft|WSL)" /proc/version &>/dev/null && "$DOTDIR"/alacritty/initialize.sh
     ;;
 esac
 
@@ -100,3 +94,7 @@ bindkey -M vicmd 'j' history-substring-search-down
 
 # Show feelings "calendar"
 feeling
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
