@@ -7,6 +7,10 @@
 #                                 __/ |
 #                                |___/
 
+# Notifications
+desktop-notifications = true
+title = ""
+
 # Font
 font-family = Cascadia Code
 font-style = SemiLight
@@ -18,7 +22,7 @@ window-padding-y = 10
 
 # Minimal titlebar
 macos-titlebar-proxy-icon = hidden
-title = " "
+# title = " "
 
 # Ayu Light
 background = #FAFAFA

@@ -7,6 +7,7 @@ cd && git clone https://github.com/qiz-li/dotfiles.git && ./dotfiles/install/ins
 
 ![Screenshot of shell and Vim](images/screenshot.png)
 
+- [`claude-code`](https://github.com/anthropics/claude-code) - Anthropic's CLI for Claude
 - [`ghostty`](https://github.com/ghostty-org/ghostty) - Fast, native terminal emulator
   - [`ayu`](https://github.com/ayu-theme/ayu-colors) - Simple, bright, and elegant theme
 - [`git`](https://github.com/git/git) - The version control system

@@ -1,0 +1,39 @@
+{
+  "env": {
+    "CLAUDE_CODE_USE_BEDROCK": "1",
+    "AWS_REGION": "us-east-1",
+    "AWS_PROFILE": "default"
+  },
+  "model": "us.anthropic.claude-opus-4-6-v1",
+  "enabledPlugins": {
+    "frontend-design@claude-plugins-official": true,
+    "vercel@claude-plugins-official": true,
+    "clangd-lsp@claude-plugins-official": true
+  },
+  "effortLevel": "high",
+  "theme": "light",
+  "preferredNotifChannel": "ghostty",
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/.claude/scripts/notify.sh 'Finished thinking'"
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "matcher": "permission_prompt",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/.claude/scripts/notify.sh 'Needs permission'"
+          }
+        ]
+      }
+    ]
+  }
+}
