@@ -62,11 +62,10 @@ else
     echo "Git settings not synced."
 fi
 # SSH
-read -rp "Do you want to sync SSH settings? Username will be set to qiz-li (y/n) " -n 1
+read -rp "Do you want to set up SSH? (y/n) " -n 1
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]; then
     ! [[ -d $HOME/.ssh ]] && mkdir "$HOME"/.ssh
-    ln -sf "$DOTDIR"/ssh/config "$HOME"/.ssh/config
     if ! [[ -f $HOME/.ssh/private_keys/github_ed25519 ]]; then
         read -rp "Do you want to generate a SSH key for GitHub (y/n) " -n 1
         echo
@@ -81,9 +80,9 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
             cat "$HOME"/.ssh/public_keys/github_ed25519.pub
         fi
     fi
-    echo "SSH settings synced."
+    echo "SSH set up."
 else
-    echo "SSH settings not synced."
+    echo "SSH not set up."
 fi
 # Keyboard
 ln -sf "$DOTDIR"/keyboard/com.local.KeyRemapping.plist "$HOME"/Library/LaunchAgents/com.local.KeyRemapping.plist
