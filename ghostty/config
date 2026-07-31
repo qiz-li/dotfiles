@@ -9,7 +9,7 @@
 
 # Notifications
 desktop-notifications = true
-title = ""
+title = " "
 
 # Font
 font-family = Cascadia Code
