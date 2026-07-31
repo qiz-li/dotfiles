@@ -12,6 +12,7 @@ cd && git clone https://github.com/qiz-li/dotfiles.git && ./dotfiles/install/ins
   - [`ayu`](https://github.com/ayu-theme/ayu-colors) - Simple, bright, and elegant theme
 - [`git`](https://github.com/git/git) - The version control system
 - [`gpg`](https://github.com/gpg/gnupg) - GNU tool for PGP encryption, currently used for Git commit signing
+- [`keyboard`](keyboard/com.local.KeyRemapping.plist) - Caps Lock remapped to Escape at login
 - [`neovim`](https://github.com/neovim/neovim) - Vim-fork focused on extensibility and usability
   - [`lazy.nvim`](https://github.com/folke/lazy.nvim) - Modern plugin manager for Neovim
     - [`ayu`](https://github.com/ayu-theme/ayu-vim) - Ayu theme, Vim edition

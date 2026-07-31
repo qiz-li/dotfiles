@@ -85,6 +85,8 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
 else
     echo "SSH settings not synced."
 fi
+# Keyboard
+ln -sf "$DOTDIR"/keyboard/com.local.KeyRemapping.plist "$HOME"/Library/LaunchAgents/com.local.KeyRemapping.plist
 # GPG
 read -rp "Do you want to sync GPG settings? (y/n) " -n 1
 echo
